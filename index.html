@@ -574,7 +574,8 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
 
 
 /* ===== World is the workforce (interactive) ===== */
-.wtabs{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line-2);border-radius:18px;overflow:hidden;background:var(--surface)}
+.wtabs{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line-2);border-radius:18px;overflow:hidden;background:var(--surface)}
+.wtab b.wico{display:flex;align-items:center;height:38px;color:var(--teal)}
 .wtab{position:relative;text-align:left;padding:22px 22px 20px;min-height:130px;display:flex;flex-direction:column;justify-content:space-between;border-left:1px solid var(--line-2);transition:background .35s}
 .wtab:first-child{border-left:0}
 .wtab b{font-size:clamp(26px,2.8vw,38px);font-weight:400;letter-spacing:-.04em;line-height:1;transition:color .35s}
@@ -602,6 +603,8 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
 .wlist{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .wlist span{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:10px;background:var(--surface-2);border:1px solid var(--line);font-size:13px}
 .wlist span::before{content:"";width:6px;height:6px;border-radius:2px;transform:rotate(45deg);background:var(--teal);flex:none}
+.wtags{display:flex;flex-wrap:wrap;gap:6px}
+.wtags span{padding:7px 11px;border-radius:9px;border:1px solid var(--line-2);font-size:12.5px;color:var(--muted)}
 .feed{display:flex;flex-direction:column;gap:6px;max-height:210px;overflow:hidden;mask-image:linear-gradient(#000 70%,transparent)}
 .feed div{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:var(--surface-2);border:1px solid var(--line);font-size:13px;animation:feedIn .5s var(--ease)}
 .feed div i{width:7px;height:7px;border-radius:50%;background:var(--teal);flex:none}
@@ -614,6 +617,7 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
 .lchip{padding:7px 11px;border-radius:9px;border:1px solid var(--line-2);font-size:12.5px;cursor:pointer;transition:all .2s;background:none}
 .lchip small{color:var(--dim);margin-left:4px}
 .lchip:hover,.lchip.on{border-color:rgba(22,233,216,.55);background:rgba(22,233,216,.08)}
+.winfo .note{font-size:13px;color:var(--dim);line-height:1.55}
 .lnote{font-size:12px;color:var(--dim)}
 .regions{display:flex;flex-wrap:wrap;gap:6px}
 .regions button{height:34px;padding:0 12px;border-radius:9px;border:1px solid var(--line-2);font-size:12.5px;color:var(--muted);transition:all .25s}
@@ -685,7 +689,7 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
 .hu .orb.r{animation-duration:16s;animation-direction:reverse}
 @keyframes spin360{to{transform:rotate(360deg)}}
 .hu .el{position:relative;width:150px;height:150px;border-radius:24px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;
-  background:linear-gradient(145deg,#112691,#1745ce 55%,#16b9d8);box-shadow:0 30px 60px -24px rgba(23,69,206,.8),inset 0 1px 0 rgba(255,255,255,.25);animation:float3 6s ease-in-out infinite}
+  background:linear-gradient(145deg,#112691,#1745ce 55%,#16b9d8);box-shadow:0 30px 60px -24px rgba(23,69,206,.8),inset 0 1px 0 rgba(255,255,255,.25)}
 @keyframes float3{50%{transform:translateY(-8px) rotate(-2deg)}}
 .hu .el small{font-family:var(--mono);font-size:11px;opacity:.75;display:flex;justify-content:space-between}
 .hu .el b{font-size:58px;font-weight:600;letter-spacing:-.04em;line-height:1}
@@ -787,6 +791,89 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
   .wtabs{grid-template-columns:1fr 1fr}.wlist{grid-template-columns:1fr}
 }
 
+/* ===== Services (light) ===== */
+.svc-who{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:22px}
+.svc-who > span:not(.mono){display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;border:1px solid var(--line-2);font-size:13.5px;background:var(--surface)}
+.svc-who svg{color:var(--teal)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.svc{padding:22px;display:flex;flex-direction:column;gap:10px}
+.svc__art{height:96px;border-radius:14px;background:var(--surface-2);border:1px solid var(--line);display:grid;place-items:center;color:var(--teal);margin-bottom:6px;overflow:hidden}
+.svc__art svg{width:78%;height:78%}
+.svc h3{font-size:18px;font-weight:500;letter-spacing:-.015em}
+.svc p{color:var(--muted);font-size:14px;font-weight:300;line-height:1.55}
+.svc__tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.svc__tags span{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;border-radius:7px;background:rgba(22,233,216,.08);color:var(--teal)}
+@media (max-width:980px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.svc-grid{grid-template-columns:1fr}}
+/* ===== Walkthrough video ===== */
+.walk{max-width:1000px;margin:0 auto}
+.walk__frame{border-radius:20px;overflow:hidden;border:1px solid var(--line-2);background:#000;box-shadow:0 30px 70px -30px rgba(0,0,0,.6)}
+.walk__frame video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.walk__steps{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:14px}
+.walk__steps button{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface);font-size:13.5px;text-align:left;color:var(--muted);transition:all .3s var(--ease)}
+.walk__steps button span{font-family:var(--mono);font-size:11px;color:var(--teal)}
+.walk__steps button:hover{color:var(--text);border-color:var(--line-2)}
+.walk__steps button.on{color:var(--text);border-color:rgba(22,233,216,.5);background:rgba(22,233,216,.07)}
+@media (max-width:760px){.walk__steps{grid-template-columns:1fr 1fr}}
+.cta--solo{grid-template-columns:1fr}
+.cta--solo .cta__panel{flex-direction:row;align-items:flex-end;justify-content:space-between;flex-wrap:wrap}
+.cta__btns{display:flex;gap:10px;flex-wrap:wrap}
+/* ===== DataVault offer ===== */
+.dv-offer{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.dvo{padding:26px;display:flex;flex-direction:column;gap:8px}
+.dvo__art{height:170px;border-radius:16px;margin-bottom:14px;display:grid;place-items:center;background:radial-gradient(80% 100% at 50% 0%,rgba(23,69,206,.25),transparent 70%),var(--surface-2);border:1px solid var(--line);overflow:hidden;position:relative}
+.dvo h3{font-size:22px;font-weight:500;letter-spacing:-.02em}
+.dvo p{color:var(--muted);font-weight:300;line-height:1.6;font-size:14.5px}
+.dv-stack{position:relative;width:100%;height:130px}
+.dsc{position:absolute;left:50%;top:calc(6px + var(--y,0px));width:168px;padding:14px;border-radius:14px;background:var(--surface);border:1px solid var(--line-2);transform:translateX(calc(-50% + var(--x))) rotate(var(--r));box-shadow:0 14px 30px -16px rgba(0,0,0,.5);overflow:hidden;transition:transform .5s var(--ease)}
+.dvo:hover .dsc{transform:translateX(calc(-50% + var(--x) * 1.5)) rotate(calc(var(--r) * 1.4))}
+.dsc i{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:rgba(22,233,216,.12);color:var(--teal);margin-bottom:10px}
+.dsc b{display:block;font-size:13.5px;font-weight:500}
+.dsc small{font-size:11.5px;color:var(--dim)}
+.dsc .wm{position:absolute;right:-14px;top:18px;transform:rotate(28deg);font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:rgba(var(--fg-rgb),.18);border:1px solid rgba(var(--fg-rgb),.14);padding:2px 22px}
+.dv-flow{display:flex;align-items:center;gap:6px;padding:0 16px}
+.fl{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:12px;color:var(--muted);text-align:center;min-width:62px}
+.fl span{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:var(--surface);border:1px solid var(--line-2);color:var(--teal)}
+.fl:last-child span{background:var(--grad);color:#fff;border-color:transparent}
+.fl-ar{flex:1;height:2px;min-width:12px;margin-bottom:24px;background:linear-gradient(90deg,var(--line-2),rgba(22,233,216,.6))}
+.dv-mods{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;margin:16px 0}
+.dvm{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 6px;border-radius:14px;border:1px solid var(--line);background:var(--surface);font-size:12.5px;text-align:center;transition:border-color .3s,transform .4s var(--ease)}
+.dvm:hover{border-color:rgba(22,233,216,.45);transform:translateY(-2px)}
+.dvm span{color:var(--teal)}
+.dv-access{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:16px;align-items:stretch;margin-top:16px;padding:22px;border-radius:20px;border:1px dashed var(--line-2)}
+.dva{display:flex;gap:14px;align-items:flex-start}
+.dva .n{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:rgba(22,233,216,.1);color:var(--teal);font-family:var(--mono);font-size:12px}
+.dva b{font-size:15px;font-weight:500}
+.dva p{margin-top:4px;font-size:13px;color:var(--muted);line-height:1.5}
+.soon{display:inline-block;margin-top:6px;font-style:normal;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:6px;background:rgba(245,158,11,.12);color:#d97706}
+.dva--cta{flex-direction:column;justify-content:center}
+@media (max-width:980px){.dv-offer{grid-template-columns:1fr}.dv-mods{grid-template-columns:repeat(4,1fr)}.dv-access{grid-template-columns:1fr}}
+@media (max-width:560px){.dsc{width:136px;transform:translateX(calc(-50% + var(--x) * .62)) rotate(var(--r))}.dv-mods{grid-template-columns:repeat(2,1fr)}.fl{min-width:48px;font-size:10.5px}.fl span{width:36px;height:36px}}
+/* ===== Case studies by data type ===== */
+.cx{display:grid;grid-template-columns:240px 1fr;gap:20px;align-items:start}
+.cx-types{display:flex;flex-direction:column;gap:6px;position:sticky;top:100px}
+.cx-type{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;border:1px solid transparent;text-align:left;font-size:14.5px;color:var(--muted);transition:all .3s var(--ease)}
+.cx-type i{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--surface-2);border:1px solid var(--line);color:var(--teal);flex:none}
+.cx-type small{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--dim)}
+.cx-type:hover{color:var(--text);background:rgba(var(--fg-rgb),.03)}
+.cx-type.on{color:var(--text);background:var(--surface);border-color:var(--line-2)}
+.cx-type.on i{background:var(--grad);color:#fff;border-color:transparent}
+.cx-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cxt{display:flex;flex-direction:column;text-align:left;padding:0;overflow:hidden;cursor:pointer}
+.cxt.hide{display:none}
+.cxt__art{height:120px;position:relative;color:rgba(22,233,216,.85);background:radial-gradient(100% 120% at 0% 0%,rgba(23,69,206,.45),transparent 60%),linear-gradient(135deg,#0b1430,#0a0f22);display:flex;align-items:flex-end;padding:14px 16px}
+.cxt__art svg.pat{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.cxt__art b{position:relative;font-size:28px;font-weight:500;letter-spacing:-.03em;color:#fff}
+.cxt__art b small{font-size:13px;font-weight:400;color:rgba(255,255,255,.75);margin-left:6px;letter-spacing:0}
+.cxt__body{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.cxt__body .mono{color:var(--teal)}
+.cxt__body h3{font-size:16px;font-weight:500;line-height:1.3}
+.cxt__go{margin-top:auto;padding-top:10px;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:6px;transition:color .3s,gap .3s}
+.cxt:hover .cxt__go{color:var(--teal);gap:10px}
+.modal__box.wide{width:min(860px,100%);max-height:88vh;overflow:auto}
+@media (max-width:980px){.cx{grid-template-columns:1fr}.cx-types{position:static;flex-direction:row;overflow:auto}.cx-type{flex:none}.cx-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.cx-grid{grid-template-columns:1fr}}
+body[data-page="vault"] #datavault{border-top:0;padding-top:56px}
 /* ---------- Responsive ---------- */
 @media (max-width:980px){
   .nav__links{display:none}
@@ -808,6 +895,190 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
   .nav .btn span:first-child{display:none}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}.rv{opacity:1;transform:none}}
+/* ===== v2: DataVault infographic ===== */
+.dvx{display:grid;grid-template-columns:150px 1fr 170px;align-items:center;gap:0;padding:34px 30px;background:radial-gradient(60% 120% at 50% 0%,rgba(23,69,206,.18),transparent 70%),var(--surface)}
+.dvx:hover{transform:none}
+.dvx__start,.dvx__end{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;font-size:14.5px;line-height:1.3;position:relative;z-index:1}
+.dvx__end small{font-size:12px;color:var(--muted)}
+.dvx__ico{display:grid;place-items:center;width:58px;height:58px;border-radius:18px;background:var(--surface-2);border:1px solid var(--line-2);color:var(--teal)}
+.dvx__ico--on{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 12px 34px -10px rgba(22,233,216,.55)}
+.dvx__routes{position:relative;display:grid;gap:26px;padding:0 4%}
+.dvx__wires{position:absolute;inset:0 -2%;width:104%;height:100%;overflow:visible;pointer-events:none}
+.dvx__wires path{fill:none;stroke:rgba(22,233,216,.35);stroke-width:1.5;vector-effect:non-scaling-stroke;stroke-dasharray:4 6;animation:dvxflow 1.6s linear infinite}
+@keyframes dvxflow{to{stroke-dashoffset:-20}}
+.dvx__route{position:relative;z-index:1;margin:0 7%;padding:16px 18px;border-radius:16px;background:var(--surface-2);border:1px solid var(--line-2)}
+.dvx__lbl{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:12px}
+.dvx__lbl .mono{color:var(--teal);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase}
+.dvx__lbl em{font-style:normal;font-size:12.5px;color:var(--muted)}
+.dvx__steps{display:flex;flex-wrap:wrap;gap:8px}
+.dvx__steps span{display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 7px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:13px}
+.dvx__steps span+span{position:relative}
+.dvx__steps i{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:rgba(22,233,216,.12);color:var(--teal);font-style:normal;font-family:var(--mono);font-size:11px}
+.dvx-stats{display:grid;grid-template-columns:repeat(4,1fr);margin:14px 0 40px;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.dvx-stats div{padding:16px 20px;display:flex;align-items:baseline;gap:10px;border-left:1px solid var(--line)}
+.dvx-stats div:first-child{border-left:0}
+.dvx-stats b{font-size:26px;font-weight:500;letter-spacing:-.03em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.dvx-stats span{font-size:13px;color:var(--muted)}
+/* catalog full width with visual cards */
+.app--full:hover{transform:none}
+.app--full .app__grid{grid-template-columns:repeat(4,1fr);gap:12px;min-height:0}
+.ds{padding:0;overflow:hidden;text-align:left;cursor:pointer;gap:0}
+.ds:hover{border-color:rgba(22,233,216,.45);transform:translateY(-3px)}
+.ds.hide{display:none}
+.ds__thumb{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0b1020}
+.ds__thumb img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.ds:hover .ds__thumb img{transform:scale(1.06)}
+.ds__thumb .ds__mod{position:absolute;left:10px;top:10px;padding:4px 8px;border-radius:7px;background:rgba(5,6,10,.7);backdrop-filter:blur(6px);color:#e5f9f7;font-size:9.5px}
+.ds__play{position:absolute;right:10px;bottom:10px;padding:6px 10px;border-radius:999px;background:var(--teal);color:#05060a;font-size:11.5px;font-weight:500;opacity:0;transform:translateY(6px);transition:all .35s var(--ease)}
+.ds:hover .ds__play,.ds:focus-visible .ds__play{opacity:1;transform:none}
+.ds__txt{padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px}
+.ds__txt b{font-size:14px;font-weight:500;margin:0}
+/* mini previews */
+.mt{position:absolute;inset:0;padding:36px 14px 14px;background:radial-gradient(120% 100% at 0 0,rgba(23,69,206,.35),transparent 60%),#0a0f22;color:#cfe;overflow:hidden}
+.mt--text{display:flex;flex-direction:column;justify-content:center;gap:6px;font-size:11.5px;color:rgba(255,255,255,.85)}
+.mt--text span{padding:4px 8px;border-radius:6px;background:rgba(255,255,255,.06);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mt--wave{display:flex;align-items:center;gap:2px;padding:20px 14px}
+.mt--wave i{flex:1;border-radius:2px;background:linear-gradient(#16e9d8,#1745ce)}
+.mt--tbl{display:flex;flex-direction:column;justify-content:center;gap:3px;font-family:var(--mono);font-size:10px}
+.mt--tbl span{display:grid;grid-template-columns:1.2fr 1fr .8fr;gap:6px;padding:4px 6px;border-radius:4px;background:rgba(255,255,255,.05)}
+.mt--tbl span:first-child{background:rgba(22,233,216,.15);color:#16e9d8}
+.mt--tbl em{font-style:normal}
+.mt--line svg{width:100%;height:100%}.mt--line path{fill:none;stroke:#16e9d8;stroke-width:2.5;vector-effect:non-scaling-stroke}
+.mt--ui b{display:block;height:12px;border-radius:4px;background:rgba(255,255,255,.12);margin-bottom:12px}
+.mt--ui span{display:block;height:16px;border-radius:5px;border:1px solid rgba(255,255,255,.18);margin-bottom:8px;width:80%}
+.mt--ui i{position:absolute;right:20%;bottom:16px;width:70px;height:20px;border-radius:6px;background:var(--grad)}
+.mt--pref{display:grid;grid-template-columns:1fr 1fr;gap:8px;place-items:stretch}
+.mt--pref span{display:grid;place-items:center;border-radius:10px;border:1px solid rgba(255,255,255,.14);font-size:18px;font-weight:500;color:rgba(255,255,255,.5)}
+.mt--pref .win{border-color:#16e9d8;color:#16e9d8;background:rgba(22,233,216,.08)}
+.mt--lidar{padding:0;background:#05070f}.mt--lidar canvas,.sv--lidar canvas{position:absolute;inset:0;width:100%;height:100%}
+/* sample modal */
+.modal__box--sample{width:min(920px,100%);max-height:90vh;overflow:auto;padding:26px}
+.dvm__head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.sv{position:relative;margin:18px 0 0;border-radius:16px;overflow:hidden;background:#070a14;border:1px solid var(--line-2);color:#e8eef7}
+.sv--img img,.sv--fus>img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.wmk{position:absolute;right:12px;top:12px;z-index:3;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;padding:4px 8px;border-radius:6px;background:rgba(5,6,10,.55);color:rgba(255,255,255,.75);pointer-events:none}
+.sv::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;background:repeating-linear-gradient(-30deg,transparent 0 120px,rgba(255,255,255,.035) 120px 122px)}
+.bb{position:absolute;border:2px solid var(--c);border-radius:4px;box-shadow:0 0 0 1px rgba(0,0,0,.25);animation:bbin .6s var(--ease) both}
+.bb em{position:absolute;left:-2px;top:-20px;padding:2px 6px;border-radius:4px 4px 4px 0;background:var(--c);color:#05060a;font-style:normal;font-family:var(--mono);font-size:10px;white-space:nowrap}
+@keyframes bbin{from{opacity:0;transform:scale(1.08)}}
+.sv-json{margin:10px 0 0;padding:12px 14px;border-radius:12px;background:var(--surface-2);border:1px solid var(--line);font-family:var(--mono);font-size:11.5px;color:var(--muted);white-space:pre-wrap;word-break:break-word}
+.sv--doc{padding:16px;display:grid;gap:8px}
+.sv-row{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.04)}
+.sv-row .lang{flex:none;width:30px;height:24px;display:grid;place-items:center;border-radius:6px;background:rgba(22,233,216,.14);color:#16e9d8;font-family:var(--mono);font-size:11px;text-transform:uppercase}
+.sv-row p{font-size:15px;line-height:1.5}.sv-row small{font-size:12px;color:rgba(232,238,247,.55)}
+.sv--audio{padding:18px}
+.aud{display:flex;align-items:center;gap:14px}
+.aud__play{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--teal);color:#05060a;padding-left:3px}
+.playing .aud__play{background:#fff}
+.aud__wave{flex:1;min-width:0;height:60px;display:flex;align-items:center;gap:2px}
+.aud__wave i{flex:1;border-radius:2px;background:rgba(22,233,216,.45);transition:background .3s}
+.playing .aud__wave i{animation:wv 1s ease-in-out infinite alternate}
+.playing .aud__wave i:nth-child(3n){animation-delay:.2s}.playing .aud__wave i:nth-child(3n+1){animation-delay:.45s}
+@keyframes wv{to{transform:scaleY(.45);background:#16e9d8}}
+.aud__tr{margin-top:16px;display:grid;gap:6px}
+.seg{display:grid;grid-template-columns:34px 70px 1fr;gap:10px;align-items:center;padding:8px 10px;border-radius:10px;transition:background .3s}
+.seg.on{background:rgba(22,233,216,.1)}
+.seg p{font-size:14px}.seg .mono{font-size:11px;color:rgba(232,238,247,.5)}
+.spk{display:grid;place-items:center;height:22px;border-radius:6px;font-family:var(--mono);font-size:10.5px;background:rgba(31,111,235,.3);color:#9cc0ff}
+.spk--S2{background:rgba(244,114,182,.22);color:#f9a8d4}
+.kb{overflow:hidden}.kb img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;animation:kb 14s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.12) translate(-1%,1%)}}
+.sv--vid .bb{transition:none}
+.rec{position:absolute;left:12px;top:12px;z-index:3;display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10.5px;padding:4px 8px;border-radius:6px;background:rgba(5,6,10,.6)}
+.rec i{width:7px;height:7px;border-radius:50%;background:#f43f5e;animation:blink 1.2s steps(2) infinite}
+.hud{position:absolute;left:12px;bottom:46px;z-index:3;font-size:11px;padding:4px 8px;border-radius:6px;background:rgba(5,6,10,.6)}
+.vbar{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;align-items:center;gap:10px;padding:10px 12px;background:linear-gradient(transparent,rgba(0,0,0,.75));font-size:10.5px}
+.vtrack{position:relative;flex:1;height:4px;border-radius:4px;background:rgba(255,255,255,.2)}
+.vtrack i{position:absolute;left:0;top:0;bottom:0;width:23%;border-radius:4px;background:var(--teal);animation:vprog 30s linear infinite}
+.vtrack b{position:absolute;top:-3px;width:3px;height:10px;border-radius:2px;background:#f59e0b}
+@keyframes vprog{from{width:0}to{width:100%}}
+.sv--tbl{padding:6px;overflow:auto}
+.sv--tbl table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:12px}
+.sv--tbl th{text-align:left;padding:10px;color:#16e9d8;font-weight:400;border-bottom:1px solid rgba(255,255,255,.1)}
+.sv--tbl td{padding:9px 10px;border-bottom:1px solid rgba(255,255,255,.05);white-space:nowrap}
+.lbl{font-weight:500}.lbl--legit{color:#4ade80}.lbl--review{color:#fbbf24}.lbl--fraud{color:#f87171}
+.sv--tel{padding:18px}
+.tel-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.tel-kpis div{padding:12px;border-radius:10px;background:rgba(255,255,255,.04)}
+.tel-kpis b{font-size:22px;font-weight:500}.tel-kpis small{font-size:12px;color:rgba(232,238,247,.6)}
+.tel-kpis span{display:block;font-size:11.5px;color:rgba(232,238,247,.55);margin-top:2px}
+.tel-chart{width:100%;height:130px;margin-top:14px}
+.tel-cap{font-size:10.5px;color:rgba(232,238,247,.5)}
+.sv--ui{display:grid;grid-template-columns:1.1fr 1fr;gap:14px;padding:16px}
+.uimock{border-radius:10px;background:#f3f4f6;color:#111;overflow:hidden}
+.uim__bar{display:flex;align-items:center;gap:5px;padding:8px 10px;background:#e5e7eb;font-size:10.5px;color:#555}
+.uim__bar i{width:8px;height:8px;border-radius:50%;background:#cbd5e1}.uim__bar span{margin-left:8px}
+.uim__body{position:relative;padding:16px;display:grid;gap:10px;min-height:170px}
+.uim__f{height:26px;border-radius:6px;background:#fff;border:1px solid #d1d5db}.uim__f.short{width:60%}
+.uim__btn{justify-self:end;padding:8px 14px;border-radius:8px;background:#1745ce;color:#fff;font-size:12px}
+.cur{position:absolute;width:14px;height:14px;border-left:2px solid #111;border-top:2px solid #111;transform:rotate(-10deg)}
+.clk{position:absolute;width:30px;height:30px;margin:-14px 0 0 -14px;border-radius:50%;border:2px solid #16e9d8;animation:clk 1.6s ease-out infinite}
+@keyframes clk{from{transform:scale(.3);opacity:1}to{transform:scale(1.4);opacity:0}}
+.traj{list-style:none;display:grid;gap:6px;align-content:start}
+.traj li{display:grid;grid-template-columns:46px 52px 1fr;gap:8px;align-items:center;padding:7px 9px;border-radius:8px;background:rgba(255,255,255,.04);font-size:12px}
+.traj .mono{color:rgba(232,238,247,.5);font-size:10.5px}.traj b{font-weight:500;color:#16e9d8}
+.traj code{font-family:var(--mono);font-size:11px;color:rgba(232,238,247,.8);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sv--pref{padding:16px;display:grid;gap:12px}
+.pq,.pr__c,.pw{padding:14px;border-radius:12px;background:rgba(255,255,255,.04)}
+.pq .mono,.pr__c .mono{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(232,238,247,.55)}
+.pq p,.pr__c p{margin-top:6px;font-size:14px;line-height:1.55}
+.pr{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pr__c.win{border:1.5px solid #16e9d8;background:rgba(22,233,216,.07)}.pr__c.win .mono{color:#16e9d8}
+.pw{display:grid;gap:4px;font-size:13px}.pw .mono{font-size:10.5px;color:rgba(232,238,247,.5)}
+.acts{position:absolute;left:12px;bottom:12px;z-index:3;display:flex;flex-wrap:wrap;gap:6px}
+.acts span{font-family:var(--mono);font-size:10.5px;padding:4px 8px;border-radius:6px;background:rgba(5,6,10,.65);color:rgba(255,255,255,.6)}
+.acts span.on{color:#05060a;background:#16e9d8}
+.traj-ov{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.traj-ov path{fill:none;stroke:#16e9d8;stroke-width:2;stroke-dasharray:5 5;vector-effect:non-scaling-stroke}
+.telem{position:absolute;right:12px;bottom:12px;z-index:3;display:grid;gap:3px;padding:10px 12px;border-radius:10px;background:rgba(5,6,10,.7);font-size:11px;color:#a7f3ec}
+.sv--lidar{aspect-ratio:16/9;background:#05070f}
+.lg{position:absolute;left:12px;bottom:12px;z-index:3;display:flex;gap:10px;font-family:var(--mono);font-size:10.5px}
+.lg span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--c);margin-right:5px}
+.pin{position:absolute;z-index:1;width:14px;height:14px;margin:-14px 0 0 -7px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#f43f5e;box-shadow:0 0 0 3px rgba(244,63,94,.3)}
+.pin em{position:absolute;left:16px;top:-6px;transform:rotate(45deg);transform-origin:left;white-space:nowrap;font-style:normal;font-size:11px;padding:2px 7px;border-radius:6px;background:rgba(5,6,10,.75);color:#fff}
+.sv--fus{display:grid;grid-template-columns:1fr 1fr}
+.sv--fus>img{height:100%;aspect-ratio:auto}
+.fus{padding:18px;display:grid;gap:12px;align-content:center}
+.fus .mono{font-size:10.5px;color:rgba(232,238,247,.6)}
+.ticks{display:flex;gap:3px;margin-top:5px}.ticks i{flex:1;height:14px;border-radius:2px;background:#16e9d8}
+.fus-cap{margin-top:4px}
+.segm{position:absolute;background:var(--c);z-index:1}
+.segm em{position:absolute;left:8px;top:8px;font-style:normal;font-family:var(--mono);font-size:10px;color:#fff;padding:2px 6px;border-radius:4px;background:rgba(5,6,10,.55)}
+/* access strip */
+.dv-how{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;margin-top:16px;padding:22px 24px;border-radius:20px;background:var(--surface);border:1px solid var(--line)}
+.dv-how__steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
+.dvh{position:relative;padding-right:28px}
+.dvh:not(:last-child)::after{content:"";position:absolute;top:19px;left:48px;right:14px;height:1px;background:linear-gradient(90deg,rgba(22,233,216,.6),var(--line-2))}
+.dvh__n{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:rgba(22,233,216,.1);color:var(--teal);margin-bottom:12px}
+.dvh b{font-size:15px;font-weight:500}
+.dvh p{margin-top:4px;font-size:13px;color:var(--muted);line-height:1.5}
+.dv-how__cta{display:flex;align-items:center;gap:10px}
+.dv-share{display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 14px;border-radius:999px;font-size:13px;color:var(--muted);transition:color .25s,background .25s}
+.dv-share:hover{color:var(--text);background:rgba(var(--fg-rgb),.05)}
+/* ===== v2: services with photos ===== */
+.svx-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.svx{display:flex;flex-direction:column}
+.svx__img{position:relative;aspect-ratio:16/10;overflow:hidden}
+.svx__img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.svx:hover .svx__img img{transform:scale(1.05)}
+.svx__img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(5,6,10,.55))}
+.svx__n{position:absolute;left:14px;bottom:12px;z-index:1;font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:#fff;padding:4px 8px;border-radius:7px;background:rgba(5,6,10,.5);backdrop-filter:blur(6px)}
+.svx__body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.svx h3{font-size:18px;font-weight:500;letter-spacing:-.015em}
+.svx p{color:var(--muted);font-size:14px;font-weight:300;line-height:1.5}
+/* ===== v2: case cards with photos ===== */
+.cxt__art{height:170px;background:#0a0f22;padding:14px 16px}
+.cxt__art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.cxt:hover .cxt__art img{transform:scale(1.06)}
+.cxt__art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,6,10,0) 35%,rgba(5,6,10,.85))}
+.cxt__art b{z-index:1}
+.cs-hero{margin:-30px -30px 22px;height:220px;position:relative;overflow:hidden;border-radius:22px 22px 0 0}
+.cs-hero img{width:100%;height:100%;object-fit:cover}
+.cs-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,var(--surface))}
+@media (max-width:980px){.dvx{grid-template-columns:1fr;gap:18px}.dvx__wires{display:none}.dvx__route{margin:0}.dvx-stats{grid-template-columns:1fr 1fr}.dvx-stats div:nth-child(3){border-left:0}.dvx-stats div:nth-child(n+3){border-top:1px solid var(--line)}.app--full .app__grid{grid-template-columns:1fr 1fr}.dv-how{grid-template-columns:1fr}.svx-grid{grid-template-columns:1fr 1fr}.sv--ui,.sv--fus{grid-template-columns:1fr}}
+@media (max-width:560px){.dv-how__steps{grid-template-columns:1fr;gap:16px}.dvh::after{display:none}.app--full .app__grid{grid-template-columns:1fr 1fr;gap:8px;padding:10px}.ds__txt{padding:10px}.ds__txt b{font-size:13px}.ds .stat{font-size:10.5px}.aud__wave i:nth-child(odd){display:none}.mt{padding-top:30px}.svx-grid{grid-template-columns:1fr}.pr{grid-template-columns:1fr}.tel-kpis{grid-template-columns:1fr 1fr}.modal__box--sample{padding:18px}.seg{grid-template-columns:30px 1fr}.seg .mono{display:none}}
+html[data-theme="light"] .ds{background:#fff}
+html[data-theme="light"] .dvx__steps span{background:#fff}
 </style>
 </head>
 <body data-mode="earner">
@@ -822,10 +1093,10 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
       <a href="#opportunities" data-audience="earner">Opportunities</a>
       <a href="#how" data-audience="earner">How it works</a>
       <a href="#voices" data-audience="earner">Voices</a>
-      <a href="#drives" data-audience="enterprise" hidden>About</a>
-      <a href="#lifecycle" data-audience="enterprise" hidden>AI lifecycle</a>
       <a href="#datavault" data-audience="enterprise" hidden>DataVault</a>
+      <a href="#lifecycle" data-audience="enterprise" hidden>Services</a>
       <a href="#cases" data-audience="enterprise" hidden>Case studies</a>
+      <a href="#drives" data-audience="enterprise" hidden>About</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav__right">
@@ -885,14 +1156,7 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
   <div class="wrap">
     <div class="sec__head">
       <div class="rv"><span class="mono tag">Opportunities</span><h2>Turn your expertise into <em>opportunity.</em></h2></div>
-      <div class="rv" style="--d:120ms;justify-self:end"><p style="justify-self:start">Work on the projects shaping AI, with missions that fit your skills, your schedule, and your location.</p><span class="mono livepill"><i></i>Live opportunity view</span></div>
-    </div>
-    <div class="kpis rv">
-      <div class="kpi"><b data-count="63">0</b><span>Open opportunities</span></div>
-      <div class="kpi"><b data-count="3.2" data-dec="1" data-suf="M+">0</b><span>Data points processed this week</span></div>
-      <div class="kpi"><b data-count="428">0</b><span>Tasks in progress right now</span></div>
-      <div class="kpi"><b data-count="96.8" data-dec="1" data-suf="%">0</b><span>First-pass acceptance rate</span></div>
-      <div class="kpi"><b data-count="1.2" data-dec="1" data-pre="$" data-suf="M+">0</b><span>Paid out to contributors this month</span></div>
+      <div class="rv" style="--d:120ms;justify-self:end"><p style="justify-self:start">Work on the projects shaping AI, with missions that fit your skills, your schedule, and your location.</p></div>
     </div>
     <div class="opp-bar rv">
       <div class="filters" role="group" aria-label="Filter opportunities">
@@ -914,13 +1178,20 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
   <div class="wrap">
     <div class="sec__head">
       <div class="rv"><span class="mono tag">How it works</span><h2>From profile to <em>paid work.</em></h2></div>
-      <p class="rv" style="--d:120ms">Fill in each step right here — your progress and status update as you go.</p>
+      <p class="rv" style="--d:120ms">A short walkthrough of the earner platform, shown with demo data: create a profile, apply, complete a task and get paid.</p>
     </div>
-    <div class="journey-line rv" aria-hidden="true"><span id="jLine"></span></div>
-    <div class="journey" id="journey"></div>
-    <div class="jsummary rv">
-      <p><b id="jDone">0 of 4</b> steps complete</p>
-      <a class="split" id="jSubmit" href="https://earner.humenium.ai/opportunities" target="_blank" rel="noopener"><span>Create your profile</span><span class="box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+    <div class="walk rv">
+      <div class="walk__frame"><video id="walkVid" src="humenium-platform-walkthrough.mp4" poster="walkthrough-poster.jpg" muted playsinline loop preload="metadata" controls></video></div>
+      <div class="walk__steps" id="walkSteps">
+        <button data-t="2"><span>01</span>Create profile</button>
+        <button data-t="10"><span>02</span>Explore, apply &amp; assess</button>
+        <button data-t="18"><span>03</span>Do the task</button>
+        <button data-t="26"><span>04</span>Get paid</button>
+        <button data-t="33.6"><span>05</span>Global network</button>
+      </div>
+    </div>
+    <div class="center rv">
+      <a class="split" href="https://earner.humenium.ai/opportunities" target="_blank" rel="noopener"><span>Get started</span><span class="box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
     </div>
   </div>
 </section>
@@ -963,6 +1234,60 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
 <!-- ======================================================
      ENTERPRISE SECTIONS
      ====================================================== -->
+<section class="sec" id="datavault" data-audience="enterprise" hidden>
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="rv"><span class="mono tag">DataVault · Data for AI</span><h2>Off-the-shelf datasets, <em>plus custom data collection.</em></h2></div>
+      <p class="rv" style="--d:120ms">License ready-made data today — or have our experts collect exactly what your model needs.</p>
+    </div>
+
+    <!-- Infographic: two routes, one AI-ready result -->
+    <div class="tile dvx rv" aria-label="Two ways to get AI training data">
+      <div class="dvx__start"><span class="dvx__ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></span><b>Your model<br>needs data</b></div>
+      <div class="dvx__routes">
+        <svg class="dvx__wires" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 C 6 50, 6 22, 12 22 L 88 22 C 94 22, 94 50, 100 50"/><path d="M0 50 C 6 50, 6 78, 12 78 L 88 78 C 94 78, 94 50, 100 50"/></svg>
+        <div class="dvx__route">
+          <div class="dvx__lbl"><span class="mono">Route A · Off-the-shelf</span><em>Ready in days</em></div>
+          <div class="dvx__steps"><span><i>1</i>Browse catalog</span><span><i>2</i>Review samples</span><span><i>3</i>License</span></div>
+        </div>
+        <div class="dvx__route">
+          <div class="dvx__lbl"><span class="mono">Route B · Custom collection</span><em>Built to your spec</em></div>
+          <div class="dvx__steps"><span><i>1</i>Spec</span><span><i>2</i>Recruit experts</span><span><i>3</i>Capture</span><span><i>4</i>Label &amp; QA</span></div>
+        </div>
+      </div>
+      <div class="dvx__end"><span class="dvx__ico dvx__ico--on"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></span><b>AI-ready dataset</b><small>Your schema · audit trail</small></div>
+    </div>
+    <div class="dvx-stats rv">
+      <div><b>16</b><span>dataset families</span></div>
+      <div><b>8</b><span>modalities</span></div>
+      <div><b>423+</b><span>languages</span></div>
+      <div><b>150+</b><span>countries</span></div>
+    </div>
+
+    <!-- Catalog -->
+    <div class="tile app app--full rv">
+      <div class="app__bar"><span class="dots"><i></i><i></i><i></i></span><span class="app__title">DataVault<small>Multimodal catalog</small></span>
+        <label class="search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input id="dvSearch" type="search" placeholder="Search datasets…" aria-label="Search datasets"></label></div>
+      <div class="app__tabs" role="tablist"><button class="on" data-dvtab="multi">Multimodal data</button><button data-dvtab="phys">World model &amp; physical AI</button></div>
+      <div class="app__body">
+        <div class="app__side" id="dvSide"></div>
+        <div class="app__grid" id="dvGrid"></div>
+      </div>
+    </div>
+
+    <!-- How access works -->
+    <div class="dv-how rv">
+      <div class="dv-how__steps">
+        <div class="dvh"><span class="dvh__n"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><b>Explore</b><p>Filter by modality, language and data type.</p></div>
+        <div class="dvh"><span class="dvh__n"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H5.2L4 17.2z"/><path d="M8 9h8M8 12h5"/></svg></span><b>Share your use case</b><p>We open the datasets that fit.</p></div>
+        <div class="dvh"><span class="dvh__n"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/></svg></span><b>Inspect samples</b><p>Watermarked, real data — before you license.</p></div>
+      </div>
+      <div class="dv-how__cta"><a class="btn btn--primary" data-magnetic href="https://calendly.com/social-humenium/30min" target="_blank" rel="noopener"><span>Request a sample</span><span class="arrow"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <button class="dv-share" id="dvShare" type="button" aria-label="Share DataVault"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>Share</button></div>
+    </div>
+  </div>
+</section>
+
 <section class="sec" id="drives" data-audience="enterprise" hidden>
   <div class="wrap">
     <div class="sec__head">
@@ -999,32 +1324,25 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
   <div class="wrap">
     <div class="sec__head">
       <div class="rv"><span class="mono tag">Global presence</span><h2>The world is <em>the workforce.</em></h2></div>
-      <p class="rv" style="--d:120ms">Intelligence doesn’t belong to one geography — neither does the expertise to build it. Tap any number to explore it.</p>
+      <p class="rv" style="--d:120ms">Intelligence doesn’t belong to one geography — neither does the expertise to build it. Tap a number to explore it.</p>
     </div>
     <div class="wtabs rv" role="tablist" aria-label="Global presence">
-      <button class="wtab on" data-w="talent" role="tab"><span class="hint">+</span><b data-count="7" data-suf="M+">0</b><span>Global talent network</span></button>
-      <button class="wtab" data-w="gig" role="tab"><span class="hint">+</span><b data-count="100" data-suf="K+">0</b><span>Active gig workers</span></button>
+      <button class="wtab on" data-w="gig" role="tab"><span class="hint">+</span><b data-count="100" data-suf="K+">0</b><span>Vetted active experts</span></button>
       <button class="wtab" data-w="langs" role="tab"><span class="hint">+</span><b data-count="423" data-suf="+">0</b><span>Languages &amp; dialects</span></button>
-      <button class="wtab" data-w="countries" role="tab"><span class="hint">+</span><b data-count="150" data-suf="+">0</b><span>Countries &amp; markets</span></button>
-      <button class="wtab" data-w="offices" role="tab"><span class="hint">+</span><b data-count="35" data-suf="+">0</b><span>Global offices</span></button>
+      <button class="wtab" data-w="countries" role="tab"><span class="hint">+</span><b data-count="150" data-suf="+">0</b><span>Countries &amp; markets covered</span></button>
+      <button class="wtab" data-w="offices" role="tab"><span class="hint">+</span><b class="wico"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="13" rx="2.5"/><path d="M2.5 10h19"/><circle cx="16.5" cy="14.5" r="1.4"/><path d="M6 3.5h12"/></svg></b><span>Global payments</span></button>
     </div>
     <div class="world">
-      <div class="tile globe-wrap rv" id="globeWrap"><canvas id="globe" aria-label="Interactive globe"></canvas><span class="mono gl"><i></i><span id="globeLabel">Global talent network</span></span><span class="mono gr">Drag to rotate</span></div>
+      <div class="tile globe-wrap rv" id="globeWrap"><canvas id="globe" aria-label="Interactive globe"></canvas><span class="mono gl"><i></i><span id="globeLabel">Vetted active experts</span></span><span class="mono gr">Drag to rotate</span></div>
       <div class="tile winfo rv" style="--d:120ms">
-        <div class="pane on" data-pane="talent">
-          <span class="mono tag">Global talent network</span>
-          <div class="wbig">7M+</div>
-          <h3>A continuously expanding pool of qualified human intelligence.</h3>
-          <p>Global candidates sourced, assessed and ready to activate when you need them — matched to your project across four expertise layers.</p>
-          <div class="wlist"><span>Global gig workforce</span><span>Domain experts</span><span>Niche &amp; technical experts</span><span>Language &amp; cultural experts</span></div>
-        </div>
-        <div class="pane" data-pane="gig">
-          <span class="mono tag">Active gig workers</span>
+        <div class="pane on" data-pane="gig">
+          <span class="mono tag">Vetted active experts</span>
           <div class="wbig">100K+</div>
-          <h3>Active contributors, working around the clock.</h3>
-          <p>Real people delivering real-world data and expertise, with 24/7 BPO operations plus mobile, field and stationary capture in real acoustic environments.</p>
-          <span class="mono">Kinds of work happening on the platform</span>
-          <div class="feed" id="gigFeed"></div>
+          <h3>Qualified, active experts — not an anonymous crowd.</h3>
+          <p>Every expert is identity-verified and assessed before joining a project, then matched by domain, language and location.</p>
+          <div class="wlist"><span>Trained generalists</span><span>Domain experts</span><span>Niche &amp; technical experts</span><span>Language &amp; cultural experts</span></div>
+          <span class="mono">Examples of the work they do</span>
+          <div class="wtags"><span>Audio transcription</span><span>Speaker diarization</span><span>Image &amp; video annotation</span><span>Preference ranking (RLHF)</span><span>Egocentric video capture</span><span>Field data collection</span><span>Translation review</span><span>Data validation</span></div>
         </div>
         <div class="pane" data-pane="langs">
           <span class="mono tag">Languages &amp; dialects</span>
@@ -1035,16 +1353,16 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
         </div>
         <div class="pane" data-pane="countries">
           <span class="mono tag">Countries &amp; markets</span>
-          <h3>Global expertise, local context in 150+ markets.</h3>
+          <h3>An expert network covering 150+ countries &amp; markets.</h3>
+          <p class="note">Countries and markets where we can recruit and deliver with vetted experts. The map shows the 135 countries in our published language coverage.</p>
           <div class="regions" id="regions"></div>
           <div class="cgrid" id="countryGrid"></div>
         </div>
         <div class="pane" data-pane="offices">
-          <span class="mono tag">Global offices</span>
-          <div class="wbig">35+</div>
-          <h3>One connected ecosystem.</h3>
-          <p>Offices across regions keep delivery close to contributors and clients — global expertise with local context, coordinated on one platform.</p>
-          <div class="pills3"><span><b>24/7</b> BPO operations</span><span>Mobile capture</span><span>Field capture</span><span>Stationary capture</span></div>
+          <span class="mono tag">Global payments</span>
+          <h3>Experts get paid on schedule, wherever they are.</h3>
+          <p>Rates are shown up front, earnings are tracked task by task, and payouts go out through international payment methods — so experts across 150+ countries and markets can work with confidence.</p>
+          <div class="pills3"><span>Rates visible up front</span><span>Per-task earnings</span><span>Scheduled payouts</span><span>International payout methods</span></div>
         </div>
       </div>
     </div>
@@ -1054,41 +1372,16 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
 <section class="sec" id="lifecycle" data-audience="enterprise" hidden>
   <div class="wrap">
     <div class="sec__head">
-      <div class="rv"><span class="mono tag">The complete AI lifecycle</span><h2>Human judgment at <em>every stage of AI.</em></h2></div>
-      <p class="rv" style="--d:120ms">From the first data blueprint to production sign-off — one workforce and one platform across every modality. Pick a stage to see exactly what we deliver.</p>
+      <div class="rv"><span class="mono tag">What we deliver</span><h2>Data and human validation <em>for post-training.</em></h2></div>
+      <p class="rv" style="--d:120ms">Real people, real judgment — for AI labs, enterprise AI teams and RL gym builders.</p>
     </div>
-    <div class="lc-rail rv" id="lcRail" role="tablist" aria-label="AI lifecycle stages"><div class="lc-track"><span id="lcTrack"></span></div></div>
-    <div class="lc-card" id="lcCard" aria-live="polite"></div>
-    <div class="lc-foot rv">
-      <div class="flowtxt"><span class="mono">Data maturity</span><b>Raw data</b><i>→</i><b>Labeled data</b><i>→</i><b>AI-ready</b><span>— tracked in DataVault with audit &amp; traceability</span></div>
-      <a class="btn btn--ghost btn--sm" href="#datavault"><span>Explore DataVault</span><span class="arrow">↓</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="datavault" data-audience="enterprise" hidden>
-  <div class="wrap">
-    <div class="sec__head">
-      <div class="rv"><span class="mono tag">Platform · DataVault</span><h2>All types of datasets, <em>one secure vault.</em></h2></div>
-      <p class="rv" style="--d:120ms">A comprehensive ecosystem of structured, unstructured and specialized datasets supporting AI training, fine-tuning, evaluation and enterprise intelligence.</p>
-    </div>
-    <div class="vault">
-      <div class="tile vault__info rv">
-        <span class="mono tag">Enterprise AI data repository</span>
-        <h3>A single source of truth for AI data.</h3>
-        <p>An enterprise-grade, centralized platform to securely store, organize and manage large volumes of multimodal data — text, images, audio, video and specialized datasets — for model training, testing and evaluation.</p>
-        <p style="margin-top:12px">Backed by a global data-acquisition ecosystem, the repository keeps expanding through multiple sourcing channels, custom collection programs, expert networks and human-in-the-loop QA.</p>
-        <div class="hl"><span>Centralized repository</span><span>Sample visibility</span><span>Structured data management</span><span>Enhanced decision-making</span><span>Scalable architecture</span><span>Audit &amp; traceability</span></div>
-      </div>
-      <div class="tile app rv" style="--d:120ms">
-        <div class="app__bar"><span class="dots"><i></i><i></i><i></i></span><span class="app__title">DataVault<small>Multimodal catalog</small></span>
-          <label class="search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input id="dvSearch" type="search" placeholder="Search datasets…" aria-label="Search datasets"></label></div>
-        <div class="app__tabs" role="tablist"><button class="on" data-dvtab="multi">Multimodal data</button><button data-dvtab="phys">World model &amp; physical AI</button></div>
-        <div class="app__body">
-          <div class="app__side" id="dvSide"></div>
-          <div class="app__grid" id="dvGrid"></div>
-        </div>
-      </div>
+    <div class="svx-grid">
+      <article class="tile svx rv" style="--d:0ms"><div class="svx__img"><img src="img/svc-collection.jpg" alt="Contributor recording speech on a phone at home" loading="lazy"><span class="svx__n">01</span></div><div class="svx__body"><h3>Data collection</h3><p>Speech, video and sensor data captured in real environments.</p><div class="svc__tags"><span>Audio</span><span>Video</span><span>Sensor</span></div></div></article>
+      <article class="tile svx rv" style="--d:80ms"><div class="svx__img"><img src="img/svc-annotation.jpg" alt="Annotator drawing bounding boxes on a street scene" loading="lazy"><span class="svx__n">02</span></div><div class="svx__body"><h3>Annotation &amp; labeling</h3><p>Boxes, segments and transcripts — human QA on every batch.</p><div class="svc__tags"><span>Supervised learning</span></div></div></article>
+      <article class="tile svx rv" style="--d:160ms"><div class="svx__img"><img src="img/svc-rlhf.jpg" alt="Expert comparing two AI responses side by side" loading="lazy"><span class="svx__n">03</span></div><div class="svx__body"><h3>Human feedback (RLHF)</h3><p>Experts rank model responses to build preference data.</p><div class="svc__tags"><span>RLHF</span><span>Preference data</span></div></div></article>
+      <article class="tile svx rv" style="--d:0ms"><div class="svx__img"><img src="img/svc-sft.jpg" alt="Doctor writing expert answers on a laptop" loading="lazy"><span class="svx__n">04</span></div><div class="svx__body"><h3>Fine-tuning data</h3><p>Domain experts write the demonstrations your model learns from.</p><div class="svc__tags"><span>SFT</span></div></div></article>
+      <article class="tile svx rv" style="--d:80ms"><div class="svx__img"><img src="img/svc-validation.jpg" alt="QA analyst reviewing data on two monitors" loading="lazy"><span class="svx__n">05</span></div><div class="svx__body"><h3>Human validation</h3><p>Every output checked against your guidelines before use.</p><div class="svc__tags"><span>QA</span><span>Audit trail</span></div></div></article>
+      <article class="tile svx rv" style="--d:160ms"><div class="svx__img"><img src="img/svc-rlgym.jpg" alt="Engineer demonstrating a task to a robot arm" loading="lazy"><span class="svx__n">06</span></div><div class="svx__body"><h3>Data for RL gyms</h3><p>Tasks, demos and feedback for teams building RL environments.</p><div class="svc__tags"><span>RL environments</span></div></div></article>
     </div>
   </div>
 </section>
@@ -1097,22 +1390,22 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
   <div class="wrap">
     <div class="sec__head">
       <div class="rv"><span class="mono tag">How we work</span><h2>From talent to <em>trusted outcome.</em></h2></div>
-      <p class="rv" style="--d:120ms">Every engagement moves through the same four stages — talent in, trusted intelligence out — and each stage has a measurable outcome.</p>
+      <p class="rv" style="--d:120ms">Every engagement moves through the same four stages — vetted experts in, AI-ready data out.</p>
     </div>
     <svg width="0" height="0" style="position:absolute"><defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1745ce"/><stop offset="1" stop-color="#16e9d8"/></linearGradient></defs></svg>
-    <div class="pipe rv" id="pipe"><div class="pipe__rail"><div class="pipe__line"><span></span></div><div><span class="pnode" style="--k:0">01</span></div><div><span class="pnode" style="--k:1">02</span></div><div><span class="pnode" style="--k:2">03</span></div><div><span class="pnode" style="--k:3">04</span></div></div><div class="pipe__cards"><div class="tile pcard"><span class="mono">Stage 01</span><h3>Engage</h3><p>Global talent, gig workforce and domain experts matched to the platform.</p><div class="outcome"><span class="vis"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><div><span class="v" data-count="7" data-suf="M+">0</span><span class="l">Global talent network</span></div></div></div><div class="tile pcard"><span class="mono">Stage 02</span><h3>Execute</h3><p>Data creation, AI model support, testing, research and domain expertise.</p><div class="outcome"><span class="vis"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.6c2.7.1 4.6 1.8 5.3 4.6"/></svg></span><div><span class="v" data-count="100" data-suf="K+">0</span><span class="l">Active contributors</span></div></div></div><div class="tile pcard"><span class="mono">Stage 03</span><h3>Optimize</h3><p>Assessments, quality control and insights run on every task.</p><div class="outcome"><span class="vis"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span><div><span class="v">96.8%</span><span class="l">First-pass acceptance</span></div></div></div><div class="tile pcard"><span class="mono">Stage 04</span><h3>Deliver</h3><p>High-quality datasets and AI-ready outcomes, validated end to end.</p><div class="outcome"><span class="vis"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></span><div><span class="v">AI-ready</span><span class="l">Schema-ready, with audit trail</span></div></div></div></div></div>
+    <div class="pipe rv" id="pipe"><div class="pipe__rail"><div class="pipe__line"><span></span></div><div><span class="pnode" style="--k:0">01</span></div><div><span class="pnode" style="--k:1">02</span></div><div><span class="pnode" style="--k:2">03</span></div><div><span class="pnode" style="--k:3">04</span></div></div><div class="pipe__cards"><div class="tile pcard"><span class="mono">Stage 01</span><h3>Engage</h3><p>Vetted experts matched to the project by domain, language and location.</p><div class="outcome"><span class="vis"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.6c2.7.1 4.6 1.8 5.3 4.6"/></svg></span><div><span class="v" data-count="100" data-suf="K+">0</span><span class="l">Vetted active experts</span></div></div></div><div class="tile pcard"><span class="mono">Stage 02</span><h3>Execute</h3><p>Data collection, annotation, human feedback and validation.</p><div class="outcome"><span class="vis"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><div><span class="v" data-count="423" data-suf="+">0</span><span class="l">Languages &amp; dialects</span></div></div></div><div class="tile pcard"><span class="mono">Stage 03</span><h3>Optimize</h3><p>Assessments, quality control and insights run on every task.</p><div class="outcome"><span class="vis"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span><div><span class="v">Human QA</span><span class="l">Review on every batch</span></div></div></div><div class="tile pcard"><span class="mono">Stage 04</span><h3>Deliver</h3><p>Datasets delivered in your schema, validated end to end.</p><div class="outcome"><span class="vis"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></span><div><span class="v">AI-ready</span><span class="l">Schema-ready, with audit trail</span></div></div></div></div></div>
   </div>
 </section>
 
 <section class="sec" id="cases" data-audience="enterprise" hidden>
   <div class="wrap">
     <div class="sec__head">
-      <div class="rv"><span class="mono tag">Case studies · outcomes</span><h2>Proven at scale, <em>in the real world.</em></h2></div>
-      <p class="rv" style="--d:120ms">Measured outcomes from speech, transcription and first-person video programs delivered for AI teams.</p>
+      <div class="rv"><span class="mono tag">Case studies</span><h2>Proven at scale, <em>in the real world.</em></h2></div>
+      <p class="rv" style="--d:120ms">Selected projects from more than 100 delivered. Pick a data type, then open a case study.</p>
     </div>
-    <div class="cs rv">
-      <div class="cs-list" id="csList" role="tablist"></div>
-      <div class="tile cs-panel" id="csPanel" aria-live="polite"></div>
+    <div class="cx rv">
+      <div class="cx-types" id="cxTypes" role="tablist"></div>
+      <div class="cx-grid" id="cxGrid"></div>
     </div>
   </div>
 </section>
@@ -1126,49 +1419,44 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
 <section class="sec" id="contact">
   <div class="wrap">
     <!-- Earner CTA -->
-    <div class="cta" data-audience="earner">
+    <div class="cta cta--solo" data-audience="earner">
       <div class="tile cta__panel rv">
-        <div><span class="mono tag">Join the network</span><h2>Ready to put your judgment to work?</h2><p>Verified expertise, real missions, and pay visible up front. Tell us your domain and we'll match you to missions where your expertise counts.</p></div>
-        <a class="btn btn--primary" data-magnetic href="https://earner.humenium.ai/opportunities" target="_blank" rel="noopener" style="align-self:flex-start"><span>Join the expert network</span><span class="arrow"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <div><span class="mono tag">Join the network</span><h2>Ready to put your expertise to work?</h2><p>Verified missions, transparent rates and pay visible up front. Create your profile on the earner platform and we’ll match you to work where your expertise counts.</p></div>
+        <div class="cta__btns"><a class="btn btn--primary" data-magnetic href="https://earner.humenium.ai/opportunities" target="_blank" rel="noopener"><span>Apply now</span><span class="arrow"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="btn btn--ghost" href="#opportunities"><span>Browse open roles</span></a></div>
       </div>
-      <form class="tile form rv" style="--d:120ms" data-mailto="contact@humenium.ai" data-subject="Join the network">
-        <div class="field"><input id="e-name" name="Name" placeholder=" " required><label for="e-name">Name *</label></div>
-        <div class="field"><input id="e-email" name="Email" type="email" placeholder=" " required><label for="e-email">Email *</label></div>
-        <div class="field"><input id="e-role" name="Current role" placeholder=" "><label for="e-role">Current role</label></div>
-        <div class="field"><input id="e-area" name="Area of expertise" placeholder=" " required><label for="e-area">Area of expertise *</label></div>
-        <div class="field full"><textarea id="e-bg" name="Background" placeholder=" "></textarea><label for="e-bg">Your background</label></div>
-        <div class="form__foot"><small>Submitting opens an email draft for you to send.</small><button class="btn btn--ghost" type="submit"><span>Join the network</span><span class="arrow"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></div>
-        <div class="form__done">Finish in your email app — your draft to contact@humenium.ai is ready.</div>
-      </form>
     </div>
 
     <!-- Enterprise CTA -->
     <div class="cta" data-audience="enterprise" hidden>
       <div class="tile cta__panel rv">
-        <div><span class="mono tag">The element behind trusted intelligence</span><h2>Let’s put intelligence to work.</h2><p>Book a 30-minute call and we’ll scope your data, evaluation or validation needs — across the complete AI lifecycle.</p><div class="formula"><span>Human expertise</span><i>×</i><span>Data</span><i>×</i><span>Technology</span><i>×</i><span>Trust</span></div></div>
+        <div><span class="mono tag">The element behind trusted intelligence</span><h2>Let’s put intelligence to work.</h2><p>Book a 30-minute call and we’ll scope your datasets, custom data collection or human validation needs.</p><div class="formula"><span>Human expertise</span><i>×</i><span>Data</span><i>×</i><span>Technology</span><i>×</i><span>Trust</span></div></div>
         <a class="btn btn--primary" data-magnetic href="https://calendly.com/social-humenium/30min" target="_blank" rel="noopener" style="align-self:flex-start"><span>Book a demo</span><span class="arrow"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
       </div>
-      <form class="tile form rv" style="--d:120ms" data-mailto="contact@humenium.ai" data-subject="Inquiry">
+      <form class="tile form rv" style="--d:120ms" data-mailto="contact@humenium.ai" data-subject="Sales inquiry">
         <div class="field"><input id="c-name" name="Name" placeholder=" " required><label for="c-name">Name *</label></div>
         <div class="field"><input id="c-email" name="Work email" type="email" placeholder=" " required><label for="c-email">Work email *</label></div>
         <div class="field"><input id="c-co" name="Company" placeholder=" " required><label for="c-co">Company *</label></div>
-        <div class="field"><input id="c-need" name="What you need" placeholder=" "><label for="c-need">Datasets, evals, collection…</label></div>
+        <div class="field"><input id="c-need" name="What you need" placeholder=" "><label for="c-need">Datasets, data collection, RLHF…</label></div>
         <div class="field full"><textarea id="c-msg" name="Project details" placeholder=" "></textarea><label for="c-msg">Tell us about your project</label></div>
-        <div class="form__foot"><small>Or email contact@humenium.ai</small><button class="btn btn--ghost" type="submit"><span>Send inquiry</span><span class="arrow"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></div>
-        <div class="form__done">Finish in your email app — your inquiry to contact@humenium.ai is ready.</div>
+        <div class="form__foot"><small>Or email contact@humenium.ai</small><button class="btn btn--ghost" type="submit"><span>Contact sales</span><span class="arrow"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></div>
+        <div class="form__done">Finish in your email app — your message to contact@humenium.ai is ready.</div>
       </form>
     </div>
   </div>
 </section>
 </main>
 
+<div class="modal" id="csModal" role="dialog" aria-modal="true" aria-labelledby="csmTitle">
+  <div class="modal__box wide" id="csmBox"></div>
+</div>
+
 <div class="modal" id="dvModal" role="dialog" aria-modal="true" aria-labelledby="dvmTitle">
-  <div class="modal__box">
-    <span class="mono tag" id="dvmMod"></span>
-    <h3 id="dvmTitle"></h3>
-    <p id="dvmDesc"></p>
+  <div class="modal__box modal__box--sample">
+    <div class="dvm__head"><div><span class="mono tag" id="dvmMod"></span><h3 id="dvmTitle"></h3><p id="dvmDesc"></p></div><button class="theme-btn" data-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div id="dvmView"></div>
     <div class="modal__meta" id="dvmMeta"></div>
-    <div class="modal__acts"><button class="btn btn--ghost btn--sm" data-close><span>Close</span></button><a class="btn btn--primary btn--sm" href="https://calendly.com/social-humenium/30min" target="_blank" rel="noopener"><span>Request sample</span><span class="arrow"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+    <div class="modal__acts"><button class="btn btn--ghost btn--sm" data-close><span>Close</span></button><a class="btn btn--primary btn--sm" href="https://calendly.com/social-humenium/30min" target="_blank" rel="noopener"><span>Request full access</span><span class="arrow"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
   </div>
 </div>
 
@@ -1180,10 +1468,10 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
       <nav aria-label="Footer">
         <a href="#opportunities" data-audience="earner">Opportunities</a>
         <a href="#how" data-audience="earner">How it works</a>
-        <a href="#drives" data-audience="enterprise" hidden>About</a>
-        <a href="#lifecycle" data-audience="enterprise" hidden>AI lifecycle</a>
         <a href="#datavault" data-audience="enterprise" hidden>DataVault</a>
+        <a href="#lifecycle" data-audience="enterprise" hidden>Services</a>
         <a href="#cases" data-audience="enterprise" hidden>Case studies</a>
+        <a href="#drives" data-audience="enterprise" hidden>About</a>
           <a href="mailto:contact@humenium.ai">contact@humenium.ai</a>
       </nav>
     </div>
@@ -1242,7 +1530,7 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
 
     document.getElementById('chipText').textContent = MODES[next].chip;
     document.getElementById('hintText').textContent = MODES[next].hint;
-    try { history.replaceState(null, '', '#' + next); } catch (e) {}
+    if (body.dataset.page !== 'vault') { try { history.replaceState(null, '', '#' + next); } catch (e) {} }
     try { localStorage.setItem('hm-mode', next); } catch (e) {}
 
     if (seek) {
@@ -1334,82 +1622,11 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
   }));
   applyFilter('all');
 
-  /* ---------- Earner: journey cards with real inputs ---------- */
-  const tickSvg = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#05060a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>';
-  const tick = (id, text) => `<label class="tick"><input type="checkbox" data-req id="${id}"><span class="box">${tickSvg}</span>${text}</label>`;
-  const STEPS = [
-    { t: 'Create profile', d: 'Tell us who you are and verify your identity.', tag: 'Identity verified', html: `
-      <div class="jf"><label for="p-name">Full name</label><input type="text" id="p-name" placeholder="Jane Doe" data-req autocomplete="name"></div>
-      <div class="jf"><label for="p-email">Email</label><input type="email" id="p-email" placeholder="you@email.com" data-req autocomplete="email"></div>
-      <div class="jf"><label for="p-country">Country</label><select id="p-country" data-req><option value="">Select country</option><option>India</option><option>United States</option><option>United Kingdom</option><option>Philippines</option><option>Brazil</option><option>Nigeria</option><option>Other</option></select></div>
-      ${tick('p-cam', 'Camera &amp; microphone checked')}
-      <div class="verify" id="p-verify"><span>Face &amp; ID verification</span><button type="button">Verify</button></div>` },
-    { t: 'Explore, apply & assess', d: 'Pick your domain, availability and how you like to be paid.', tag: 'Assessment completed', html: `
-      <div class="jf"><label for="a-domain">Primary domain</label><select id="a-domain" data-req><option value="">Select domain</option><option>Languages &amp; translation</option><option>Voice &amp; audio</option><option>Data collection</option><option>AI evaluation</option><option>Finance</option><option>Cybersecurity</option><option>Other</option></select></div>
-      <div class="jf"><span class="lbl">Availability</span><div class="range"><input type="range" id="a-hours" min="5" max="40" step="5" value="20"><output id="a-hoursOut">20 h/wk</output></div></div>
-      <div class="jf"><span class="lbl">Preferred pay</span><div class="seg" data-req data-group="a-pay"><button type="button">Hourly</button><button type="button">Per task</button><button type="button">Either</button></div></div>
-      ${tick('a-assess', 'Ready for a short assessment')}` },
-    { t: 'Interview & get matched', d: 'Book a quick interview and tell us your languages.', tag: 'Matched to mission', html: `
-      <div class="jf"><span class="lbl">Interview slot</span><div class="chips" data-req data-group="i-slot"><button type="button">Mon 10:00</button><button type="button">Tue 14:00</button><button type="button">Wed 18:00</button><button type="button">Fri 11:00</button></div></div>
-      <div class="jf"><label for="i-tz">Time zone</label><select id="i-tz" data-req><option value="">Select time zone</option><option>IST (UTC+5:30)</option><option>GMT (UTC+0)</option><option>EST (UTC−5)</option><option>PST (UTC−8)</option><option>CET (UTC+1)</option></select></div>
-      <div class="jf"><label for="i-lang">Languages</label><input type="text" id="i-lang" placeholder="English, Hindi…" data-req></div>` },
-    { t: 'Work & get paid', d: 'Choose how your earnings reach you.', tag: 'Payment issued', html: `
-      <div class="jf"><span class="lbl">Payout method</span><div class="seg" data-req data-group="w-method"><button type="button">PayPal</button><button type="button">Bank</button><button type="button">Payoneer</button></div></div>
-      <div class="jf"><label for="w-email">Payout email / account</label><input type="text" id="w-email" placeholder="payouts@email.com" data-req></div>
-      ${tick('w-terms', 'I agree to the contributor terms')}` }
-  ];
-  const journey = document.getElementById('journey');
-  journey.innerHTML = STEPS.map((s, i) => `
-    <article class="tile jcard rv" style="--d:${i * 90}ms" data-step="${i}">
-      <div class="jcard__top"><span class="jnum">${String(i + 1).padStart(2, '0')}</span><span class="jtag">${s.tag}</span></div>
-      <h3>${s.t}<small>${s.d}</small></h3>
-      <div class="jprog"><div class="jbar"><span></span></div><b>0%</b></div>
-      <div class="jfields">${s.html}</div>
-    </article>`).join('');
-
-  const isFilled = el => {
-    if (el.matches('.seg, .chips')) return !!el.querySelector('.on');
-    if (el.type === 'checkbox') return el.checked;
-    if (el.type === 'email') return /\S+@\S+\.\S+/.test(el.value);
-    return el.value.trim().length > 1;
-  };
-  const cards = [...journey.querySelectorAll('.jcard')];
-  const jLine = document.getElementById('jLine'), jDone = document.getElementById('jDone');
-  function updateJourney() {
-    let done = 0;
-    cards.forEach(card => {
-      const reqs = [...card.querySelectorAll('[data-req]')];
-      const verify = card.querySelector('.verify');
-      let total = reqs.length + (verify ? 1 : 0), ok = 0;
-      reqs.forEach(r => { const f = isFilled(r); if (f) ok++; if (r.matches('input,select')) r.classList.toggle('ok', f); });
-      if (verify && verify.classList.contains('ok')) ok++;
-      const pct = Math.round(ok / total * 100);
-      card.querySelector('.jbar span').style.width = pct + '%';
-      card.querySelector('.jprog b').textContent = pct + '%';
-      const was = card.classList.contains('done');
-      card.classList.toggle('done', pct === 100);
-      if (pct === 100) { done++; if (!was) say(`Step ${+card.dataset.step + 1} complete`); }
-    });
-    jLine.style.width = done / cards.length * 100 + '%';
-    jDone.textContent = `${done} of ${cards.length}`;
-  }
-  journey.addEventListener('input', updateJourney);
-  journey.addEventListener('change', updateJourney);
-  journey.addEventListener('click', e => {
-    const b = e.target.closest('.seg button, .chips button');
-    if (b) { b.parentElement.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); updateJourney(); }
-    const v = e.target.closest('.verify button');
-    if (v) { v.classList.add('busy'); setTimeout(() => { v.classList.remove('busy'); v.textContent = 'Verified ✓'; v.parentElement.classList.add('ok'); updateJourney(); }, 1400); }
-  });
-  const hours = document.getElementById('a-hours');
-  hours.addEventListener('input', () => document.getElementById('a-hoursOut').textContent = hours.value + ' h/wk');
-  document.getElementById('jSubmit').addEventListener('click', () => {
-    // Hook point: send the collected profile to your earner platform API here.
-    const data = {}; journey.querySelectorAll('input[id],select[id]').forEach(el => data[el.id] = el.type === 'checkbox' ? el.checked : el.value);
-    journey.querySelectorAll('[data-group]').forEach(g => data[g.dataset.group] = (g.querySelector('.on') || {}).textContent || '');
-    console.log('Profile draft', data);
-  });
-  updateJourney();
+  /* ---------- Earner: platform walkthrough video ---------- */
+  const walkVid = document.getElementById('walkVid'), walkSteps = [...document.querySelectorAll('#walkSteps button')];
+  walkSteps.forEach(b => b.addEventListener('click', () => { walkVid.currentTime = +b.dataset.t; walkVid.play().catch(() => {}); }));
+  walkVid.addEventListener('timeupdate', () => { const t = walkVid.currentTime; walkSteps.forEach((b, k) => { const a = +b.dataset.t, n = walkSteps[k + 1] ? +walkSteps[k + 1].dataset.t : 99; b.classList.toggle('on', t >= a && t < n); }); });
+  new IntersectionObserver(([e]) => { if (e.isIntersecting && !reduce) walkVid.play().catch(() => {}); else walkVid.pause(); }, { threshold: .4 }).observe(walkVid);
 
   /* ---------- Earner: voices — sticky stacking cards ---------- */
   const vcards = [...document.querySelectorAll('.vcard')];
@@ -1457,82 +1674,11 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
   syncThemeBtn();
 
 
-  /* ---------- Enterprise: AI lifecycle explorer ---------- */
-  const ck = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>';
-  const LC = [
-    { n: 'Data strategy & design', ic: '<path d="M4 4h16v6H4zM4 14h7v6H4zM15 14h5v6h-5z"/>',
-      h: 'Design the right data before collecting it.',
-      d: 'We turn your model requirement into a data blueprint — what to collect, from whom, in which languages and conditions, and what “good” looks like.',
-      q: 'Output: a blueprint your collection, labeling and QA teams can execute against.',
-      what: ['Requirement scoping with domain experts', 'Data blueprint & schema design', 'Sampling, diversity & coverage plans', 'Quality specs and acceptance criteria'],
-      caps: ['Domain expertise & consulting', 'Surveys & market intelligence'], svc: ['Domain expertise','Surveys'] },
-    { n: 'Data collection', ic: '<path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v3h16v-3"/>',
-      h: 'Real-world data, captured at global scale.',
-      d: 'Contributors across 150+ markets capture speech, first-person video, human demonstrations, field and sensor data — in real environments, on real devices.',
-      q: 'Example: 1,000+ hours of dialect-level voice data in ~4 weeks.',
-      what: ['Speech & conversational audio (BPO, mobile, field)', 'First-person / head-mounted video', 'Robotics & UMI human demonstrations', 'Field data, mapping & POI', 'Physical AI & sensor data'],
-      caps: ['Transcription, voice & language', 'Physical AI & sensor data', 'Field data & mapping'], svc: ['Data collection','Multilingual AI'] },
-    { n: 'Annotation & labeling', ic: '<path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/>',
-      h: 'Raw signal into labeled, structured data.',
-      d: 'Trained annotators and linguists transcribe, tag, segment and label every modality, with human-in-the-loop QA on each batch.',
-      q: 'Example: transcription & annotation across 30 languages with 1,500 resources.',
-      what: ['Transcription, timestamps & speaker diarization', 'Image & video annotation, scene labeling', 'Text, OCR & document labeling', 'Synthetic data generation & review'],
-      caps: ['Image, video & synthetic data', 'Transcription, voice & language'], svc: ['Data annotation','Multilingual AI'] },
-    { n: 'Model training', ic: '<circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M8 6h8M7 8l4 8M17 8l-4 8"/>',
-      h: 'Expert data that teaches models to reason.',
-      d: 'Domain experts write and review fine-tuning data, give human feedback and build preference data so models learn from real judgment, not guesswork.',
-      q: 'Output: SFT, RLHF and preference datasets in your schema.',
-      what: ['Supervised fine-tuning (SFT) data', 'Human feedback & RLHF', 'Preference pairs and rankings', 'Multilingual & domain-specific training data'],
-      caps: ['Domain expertise & consulting', 'Transcription, voice & language'], svc: ['AI training','Human feedback','Multilingual AI'] },
-    { n: 'Model evaluation & evals', ic: '<path d="M4 19V5M4 19h16"/><path d="M8 15l3-4 3 2 5-6"/>',
-      h: 'Measure what the model actually gets right.',
-      d: 'Evals are how you know a model is ready. Human experts score outputs for accuracy, reasoning, safety and helpfulness, compare models side by side, and build benchmarks that reflect your real use cases.',
-      q: 'Why it matters: automated metrics miss what a domain expert spots in seconds.',
-      what: ['Expert rating of model outputs (accuracy, safety, tone)', 'Side-by-side model comparisons', 'Benchmark & golden-dataset creation', 'Red-teaming and failure-case discovery', 'Agent & task-completion evaluation'],
-      caps: ['Model evaluation & evals', 'Domain expertise & consulting'], svc: ['AI evaluation','Human feedback'] },
-    { n: 'Testing, validation & deployment', ic: '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/>',
-      h: 'Validated before it ships. Watched after.',
-      d: 'Real users test products in real conditions, experts validate behavior against requirements, and humans sign off before release — then keep checking in production.',
-      q: 'Output: human sign-off with a full audit trail.',
-      what: ['UX & usability testing with real users', 'Model validation against acceptance criteria', 'Human sign-off before production', 'Ongoing quality monitoring'],
-      caps: ['Testing, UX & validating', 'Model evaluation & evals'], svc: ['Model validation','AI evaluation'] }
-  ];
-  const lcRail = document.getElementById('lcRail'), lcCard = document.getElementById('lcCard'), lcTrack = document.getElementById('lcTrack');
-  lcRail.insertAdjacentHTML('beforeend', LC.map((x, i) => `<button class="lc-step" role="tab" data-i="${i}">
-    <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${x.ic}</svg><span class="ok"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span></span>
-    <span class="n">STAGE 0${i + 1}</span><b>${x.n}</b><span class="timer"><span></span></span></button>`).join(''));
-  const spark = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"/></svg>';
-  const tickI = '<i><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></i>';
-  let lcI = 0, lcTimer, lcAuto = true;
-  function lcShow(i) {
-    lcI = i;
-    lcRail.querySelectorAll('.lc-step').forEach((b, k) => { b.classList.toggle('on', k === i); b.classList.toggle('past', k < i); b.setAttribute('aria-selected', k === i);
-      const t = b.querySelector('.timer span'); t.style.animation = 'none'; void t.offsetWidth; t.style.animation = ''; });
-    lcTrack.style.width = (i / (LC.length - 1) * 100) + '%';
-    const x = LC[i];
-    lcCard.classList.remove('lc-anim'); void lcCard.offsetWidth; lcCard.classList.add('lc-anim');
-    lcCard.innerHTML = `
-      <div><span class="mono tag">Stage 0${i + 1} · ${x.n}</span><h3>${x.h}</h3><p>${x.d}</p><div class="lc-q">${spark}<span>${x.q}</span></div></div>
-      <div><h4>What we deliver</h4><ul>${x.what.map(w => `<li>${tickI}<span>${w}</span></li>`).join('')}</ul></div>
-      <div><h4>Capabilities</h4><div class="lc-caps">${x.caps.map(c => `<span>${c}</span>`).join('')}</div>
-        <h4 style="margin-top:24px">Services</h4><div class="lc-caps">${x.svc.map(c => `<span>${c}</span>`).join('')}</div>
-        <div class="lc-nav"><span>0${i + 1} / 06</span>
-          <button class="theme-btn" data-lc="-1" aria-label="Previous stage"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button>
-          <button class="theme-btn" data-lc="1" aria-label="Next stage"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button></div></div>`;
-    clearTimeout(lcTimer);
-    if (lcAuto && !reduce) lcTimer = setTimeout(() => lcShow((lcI + 1) % LC.length), 7000);
-  }
-  const stopAuto = () => { lcAuto = false; clearTimeout(lcTimer); lcRail.style.setProperty('--dur', '0s'); };
-  lcRail.addEventListener('click', e => { const b = e.target.closest('.lc-step'); if (!b) return; stopAuto(); lcShow(+b.dataset.i); });
-  lcCard.addEventListener('click', e => { const b = e.target.closest('[data-lc]'); if (!b) return; stopAuto(); lcShow((lcI + +b.dataset.lc + LC.length) % LC.length); });
-  new IntersectionObserver(([e], o) => { if (e.isIntersecting) { lcShow(0); o.disconnect(); } }, { threshold: .3 }).observe(lcRail);
-  lcShow(0); clearTimeout(lcTimer);
-
   /* ---------- Enterprise: interactive globe + presence tabs ---------- */
   const GEO = {"langs":[["Acehnese",["Indonesia"]],["Afrikaans",["South Africa"]],["Akan",["Ghana"]],["Albanian",["Albania"]],["Alemannic",["Germany"]],["Amharic",["Ethiopia"]],["Amoy Hokkien",["China"]],["Arabic",["Algeria","Azerbaijan","Bahrain","Egypt","Iraq","Jordan","Lebanon","Libya","Morocco","Qatar","Saudi Arabia","Senegal","Sudan","Syria","Tunisia","Turkey","UAE","Yemen"]],["Armenian",["Armenia"]],["Assamese",["India"]],["Awadhi",["India"]],["Azerbaijani",["Azerbaijan","Turkey"]],["Bagheli",[]],["Balinese",["Indonesia"]],["Baluchi",["Pakistan"]],["Bambara",["Mali"]],["Banjar",["Indonesia"]],["Barisan",["Indonesia"]],["Basque",["Spain"]],["Batak Toba",["Indonesia"]],["Bavarian",["Germany"]],["Belarusian",["Belarus"]],["Bemba",["Malawi","Zambia"]],["Bengali",["Bangladesh","India"]],["Betawi",["Indonesia"]],["Bhili",["India"]],["Bhojpuri",["India"]],["Bodo",["Bangladesh"]],["Bosnian",["Bosnia & Herzegovina","Croatia","North Macedonia","Serbia"]],["Breton",["France"]],["Buginese",["Indonesia"]],["Bulgarian",["Bulgaria"]],["Bundeli",["India"]],["Burmese",["Myanmar","Thailand"]],["Cantonese",[]],["Catalan",["Spain"]],["Cebuano",["Philippines"]],["Central Malay",["Indonesia"]],["Chewa",["Malawi","South Africa","Zambia"]],["Chhattisgarhi",["India"]],["Chinese (Simplified)",["China","Hong Kong","Singapore","Taiwan"]],["Chinese (Traditional)",["China","Hong Kong","Macau","Taiwan"]],["Chittagonian",["Bangladesh"]],["Corsican",[]],["Croatian",["Croatia","Serbia"]],["Czech",["Czech Republic"]],["Danish",["Denmark"]],["Dari",["Afghanistan"]],["Dhundhari",["India"]],["Dogri",["India"]],["Dutch",["Belgium","Netherlands","Suriname"]],["Dyula",["Burkina Faso"]],["Dzongkha",["Bhutan"]],["English",["Australia","Canada","India","Ireland","Jamaica","New Zealand","Singapore","UK","USA"]],["Esperanto",[]],["Estonian",["Estonia"]],["Ewe",["Ghana"]],["Fanagalo",["South Africa"]],["Farsi",["Iran"]],["Filipino",["Philippines"]],["Finnish",["Finland"]],["French",["Belgium","Canada","France","Haiti","Switzerland"]],["Frisian",["Germany"]],["Fulah",[]],["Galician",["Spain"]],["Gaan",["China"]],["Ganda",["Uganda"]],["Garhwali",["India"]],["Georgian",["Georgia","Russia"]],["German",["Austria","Belgium","Germany","Switzerland"]],["Greek",["Cyprus","Greece"]],["Guarani",["Paraguay"]],["Gujarati",["India"]],["Gujari",["India"]],["Haitian Creole",["Haiti"]],["Hakka",["China","Taiwan"]],["Hakka Meixian",["China"]],["Haryanvi",["India"]],["Hausa",["Nigeria"]],["Hawaiian",["Hawaii"]],["Hebrew",["Israel"]],["Hiligaynon",["Philippines"]],["Hindi",["India"]],["Hinglish",["India"]],["Hmong",["Laos"]],["Hungarian",["Hungary","Romania"]],["Icelandic",["Iceland"]],["Igbo",["Nigeria"]],["Ilocano",["Philippines"]],["Indonesian",["Indonesia"]],["Irish",[]],["Italian",["Italy","Switzerland"]],["Japanese",["Japan"]],["Javanese",["Indonesia"]],["Jin",["China"]],["Kabuverdianu",["Cabo Verde"]],["Kabyle",["Algeria"]],["Kannada",["India"]],["Kapampangan",["Philippines"]],["Kashmiri",["India"]],["Kazakh",["Kazakhstan"]],["Khmer",["Cambodia"]],["Kikuyu",["Kenya"]],["Kinyarwanda",["Rwanda"]],["Kirghiz / Kyrgyz",["Kyrgyzstan"]],["Kirundi",["Burundi"]],["Kokborok",["India"]],["Kongo",["DR Congo"]],["Konkani",["India"]],["Korean",["South Korea"]],["Kurdish (Kurmanji)",["Turkey"]],["Lao",["Laos"]],["Latvian",["Latvia"]],["Lithuanian",["Lithuania"]],["Lombard",["Italy"]],["Luba",["DR Congo"]],["Luxembourgish",["Luxembourg"]],["Macedonian",["North Macedonia"]],["Madurese",["Indonesia"]],["Magahi",["India"]],["Maithili",["India"]],["Malay",["Malaysia"]],["Malayalam",["India"]],["Maltese",["Malta"]],["Mandarin",["China","Hong Kong","Malaysia","Taiwan"]],["Marathi",["India"]],["Malagasy",["Madagascar"]],["Maori",["New Zealand"]],["Mongolian",["Mongolia"]],["Montenegrin",["Montenegro"]],["Mooré",["Burkina Faso"]],["Nepali",["India","Nepal"]],["Nigerian Pidgin",["Nigeria"]],["Norwegian",["Norway"]],["Odia",["India"]],["Oromo",["Ethiopia"]],["Pashto",["Afghanistan","Pakistan"]],["Polish",["Poland"]],["Portuguese",["Angola","Brazil","Cabo Verde","Portugal"]],["Punjabi",["India","Pakistan"]],["Quechua",["Peru"]],["Romanian",["Romania"]],["Russian",["Armenia","Belarus","Estonia","Georgia","Kazakhstan","Moldova","Russia","Turkmenistan","Ukraine","Uzbekistan"]],["Sanskrit",["India"]],["Santali",["India"]],["Serbian",["Albania","Bosnia & Herzegovina","Croatia","Kosovo","Montenegro","North Macedonia","Serbia"]],["Sinhala",["Sri Lanka"]],["Slovak",["Czech Republic","Slovakia"]],["Slovenian",["Slovenia"]],["Somali",["Kenya","Somalia"]],["Spanish",["Argentina","Chile","Colombia","Costa Rica","Cuba","Dominican Republic","Ecuador","El Salvador","Guatemala","Honduras","Mexico","Nicaragua","Paraguay","Peru","Puerto Rico","Spain","USA","Uruguay","Venezuela"]],["Swahili",["Kenya","Tanzania"]],["Swedish",["Finland","Sweden"]],["Tagalog",["Philippines","USA"]],["Tamil",["India","Sri Lanka"]],["Telugu",["India"]],["Thai",["Thailand"]],["Turkish",["Azerbaijan","Turkey"]],["Ukrainian",["Ukraine"]],["Urdu",["India","Pakistan","Oman"]],["Uzbek",["Kazakhstan","Uzbekistan"]],["Vietnamese",["USA","Vietnam"]],["Welsh",["UK"]],["Wolof",["Senegal","South Africa"]],["Xhosa",["South Africa"]],["Yiddish",["Israel"]],["Yoruba",["Nigeria"]],["Zulu",["South Africa"]]],"countries":[["Afghanistan","Asia",33,65],["Albania","Europe",41,20],["Algeria","Africa",28,3],["Angola","Africa",-12.5,18.5],["Argentina","Americas",-34,-64],["Armenia","Europe",40,45],["Australia","Oceania",-25,134],["Austria","Europe",47.5,14.5],["Azerbaijan","Europe",40.5,47.5],["Bahrain","Middle East",26,50.5],["Bangladesh","Asia",24,90],["Belarus","Europe",53.5,28],["Belgium","Europe",50.8,4.5],["Bhutan","Asia",27.5,90.5],["Bosnia & Herzegovina","Europe",44,18],["Brazil","Americas",-10,-55],["Bulgaria","Europe",42.7,25],["Burkina Faso","Africa",12.3,-1.6],["Burundi","Africa",-3.4,29.9],["Cabo Verde","Africa",16,-24],["Cambodia","Asia",12.5,105],["Canada","Americas",56,-106],["Chile","Americas",-30,-71],["China","Asia",35,103],["Colombia","Americas",4,-73],["Costa Rica","Americas",10,-84],["Croatia","Europe",45.1,15.5],["Cuba","Americas",21.5,-79.5],["Cyprus","Europe",35,33],["Czech Republic","Europe",49.8,15.5],["DR Congo","Africa",-2.9,23.6],["Denmark","Europe",56,10],["Dominican Republic","Americas",19,-70.7],["Ecuador","Americas",-1.8,-78.2],["Egypt","Africa",27,30],["El Salvador","Americas",13.8,-88.9],["Estonia","Europe",59,26],["Ethiopia","Africa",9,39.5],["Finland","Europe",64,26],["France","Europe",46,2],["Georgia","Europe",42,43.5],["Germany","Europe",51,10],["Ghana","Africa",8,-1.2],["Greece","Europe",39,22],["Guatemala","Americas",15.5,-90.3],["Haiti","Americas",19,-72.3],["Hawaii","Oceania",20.8,-156.3],["Honduras","Americas",15,-86.5],["Hong Kong","Asia",22.3,114.2],["Hungary","Europe",47,19.5],["Iceland","Europe",65,-18],["India","Asia",21,78],["Indonesia","Asia",-2,118],["Iran","Middle East",32,53],["Iraq","Middle East",33,44],["Ireland","Europe",53,-8],["Israel","Middle East",31,35],["Italy","Europe",42.8,12.8],["Jamaica","Americas",18.1,-77.3],["Japan","Asia",36,138],["Jordan","Middle East",31,36],["Kazakhstan","Asia",48,68],["Kenya","Africa",0.5,38],["Kosovo","Europe",42.6,20.9],["Kyrgyzstan","Asia",41,75],["Laos","Asia",18,105],["Latvia","Europe",57,25],["Lebanon","Middle East",33.9,35.8],["Libya","Africa",27,17],["Lithuania","Europe",55.5,24],["Luxembourg","Europe",49.8,6.1],["Macau","Asia",22.2,113.5],["Madagascar","Africa",-19,46.7],["Malawi","Africa",-13.3,34],["Malaysia","Asia",3,102],["Mali","Africa",17,-4],["Malta","Europe",35.9,14.4],["Mexico","Americas",23,-102],["Moldova","Europe",47,28.5],["Mongolia","Asia",46,105],["Montenegro","Europe",42.7,19.3],["Morocco","Africa",32,-6],["Myanmar","Asia",21,96],["Nepal","Asia",28,84],["Netherlands","Europe",52.2,5.5],["New Zealand","Oceania",-41,174],["Nicaragua","Americas",13,-85],["Nigeria","Africa",9,8],["North Macedonia","Europe",41.6,21.7],["Norway","Europe",62,10],["Oman","Middle East",21,57],["Pakistan","Asia",30,70],["Paraguay","Americas",-23,-58],["Peru","Americas",-10,-76],["Philippines","Asia",13,122],["Poland","Europe",52,19],["Portugal","Europe",39.5,-8],["Puerto Rico","Americas",18.2,-66.5],["Qatar","Middle East",25.3,51.2],["Romania","Europe",46,25],["Russia","Europe",60,90],["Rwanda","Africa",-2,30],["Saudi Arabia","Middle East",24,45],["Senegal","Africa",14.5,-14.5],["Serbia","Europe",44,21],["Singapore","Asia",1.35,103.8],["Slovakia","Europe",48.7,19.5],["Slovenia","Europe",46.1,14.8],["Somalia","Africa",6,46],["South Africa","Africa",-29,24],["South Korea","Asia",36,128],["Spain","Europe",40,-4],["Sri Lanka","Asia",7.8,80.7],["Sudan","Africa",15,30],["Suriname","Americas",4,-56],["Sweden","Europe",62,15],["Switzerland","Europe",46.8,8.2],["Syria","Middle East",35,38],["Taiwan","Asia",23.7,121],["Tanzania","Africa",-6.4,35],["Thailand","Asia",15,101],["Tunisia","Africa",34,9],["Turkey","Middle East",39,35],["Turkmenistan","Asia",39,59],["UAE","Middle East",24,54],["UK","Europe",54,-2],["USA","Americas",39,-98],["Uganda","Africa",1.4,32.3],["Ukraine","Europe",49,32],["Uruguay","Americas",-33,-56],["Uzbekistan","Asia",41,64],["Venezuela","Americas",7,-66],["Vietnam","Asia",16,107],["Yemen","Middle East",15.5,48],["Zambia","Africa",-14,27.8]]};
   const LAND = [[-53.6,-72.4],[-53.6,-68.7],[-51.4,-74.1],[-51.4,-70.6],[-49.2,-74.7],[-49.2,-71.3],[-49.2,-67.9],[-47.0,-73.0],[-47.0,-69.7],[-44.8,-74.5],[-44.8,-71.4],[-44.8,-68.3],[-44.8,167.6],[-44.8,170.7],[-42.6,-72.0],[-42.6,-69.0],[-42.6,-66.0],[-42.6,147.0],[-40.4,-72.6],[-40.4,-69.7],[-40.4,-66.8],[-40.4,-63.9],[-40.4,148.1],[-38.2,-73.1],[-38.2,-70.3],[-38.2,-67.5],[-38.2,-64.7],[-38.2,-61.9],[-38.2,-59.1],[-38.2,143.4],[-38.2,146.2],[-38.2,177.2],[-36.0,-70.9],[-36.0,-68.2],[-36.0,-65.5],[-36.0,-62.7],[-36.0,-60.0],[-36.0,141.8],[-36.0,144.5],[-36.0,147.3],[-36.0,150.0],[-33.8,-70.7],[-33.8,-68.0],[-33.8,-65.3],[-33.8,-62.7],[-33.8,-60.0],[-33.8,-57.3],[-33.8,-54.7],[-33.8,20.0],[-33.8,22.7],[-33.8,25.3],[-33.8,116.0],[-33.8,118.7],[-33.8,121.3],[-33.8,140.0],[-33.8,142.7],[-33.8,145.3],[-33.8,148.0],[-33.8,150.7],[-31.6,-71.2],[-31.6,-68.6],[-31.6,-66.0],[-31.6,-63.5],[-31.6,-60.9],[-31.6,-58.3],[-31.6,-55.7],[-31.6,-53.1],[-31.6,19.4],[-31.6,22.0],[-31.6,24.6],[-31.6,27.2],[-31.6,117.8],[-31.6,120.4],[-31.6,123.0],[-31.6,125.6],[-31.6,128.2],[-31.6,130.8],[-31.6,133.4],[-31.6,136.0],[-31.6,138.6],[-31.6,141.2],[-31.6,143.7],[-31.6,146.3],[-31.6,148.9],[-31.6,151.5],[-29.4,-71.0],[-29.4,-68.5],[-29.4,-65.9],[-29.4,-63.4],[-29.4,-60.8],[-29.4,-58.3],[-29.4,-55.8],[-29.4,-53.2],[-29.4,-50.7],[-29.4,17.7],[-29.4,20.3],[-29.4,22.8],[-29.4,25.4],[-29.4,27.9],[-29.4,30.4],[-29.4,116.6],[-29.4,119.2],[-29.4,121.7],[-29.4,124.2],[-29.4,126.8],[-29.4,129.3],[-29.4,131.8],[-29.4,134.4],[-29.4,136.9],[-29.4,139.4],[-29.4,142.0],[-29.4,144.5],[-29.4,147.0],[-29.4,149.6],[-29.4,152.1],[-27.2,-70.8],[-27.2,-68.3],[-27.2,-65.8],[-27.2,-63.3],[-27.2,-60.8],[-27.2,-58.3],[-27.2,-55.9],[-27.2,-53.4],[-27.2,-50.9],[-27.2,16.1],[-27.2,18.6],[-27.2,21.1],[-27.2,23.6],[-27.2,26.1],[-27.2,28.6],[-27.2,31.0],[-27.2,115.4],[-27.2,117.9],[-27.2,120.4],[-27.2,122.9],[-27.2,125.4],[-27.2,127.9],[-27.2,130.3],[-27.2,132.8],[-27.2,135.3],[-27.2,137.8],[-27.2,140.3],[-27.2,142.8],[-27.2,145.2],[-27.2,147.7],[-27.2,150.2],[-27.2,152.7],[-25.0,-68.1],[-25.0,-65.7],[-25.0,-63.2],[-25.0,-60.8],[-25.0,-58.4],[-25.0,-55.9],[-25.0,-53.5],[-25.0,-51.1],[-25.0,-48.6],[-25.0,17.0],[-25.0,19.5],[-25.0,21.9],[-25.0,24.3],[-25.0,26.8],[-25.0,29.2],[-25.0,31.6],[-25.0,34.1],[-25.0,46.2],[-25.0,114.3],[-25.0,116.8],[-25.0,119.2],[-25.0,121.6],[-25.0,124.1],[-25.0,126.5],[-25.0,128.9],[-25.0,131.4],[-25.0,133.8],[-25.0,136.2],[-25.0,138.6],[-25.0,141.1],[-25.0,143.5],[-25.0,145.9],[-25.0,148.4],[-25.0,150.8],[-25.0,153.2],[-22.8,-69.6],[-22.8,-67.2],[-22.8,-64.8],[-22.8,-62.4],[-22.8,-60.0],[-22.8,-57.6],[-22.8,-55.2],[-22.8,-52.8],[-22.8,-50.4],[-22.8,-48.0],[-22.8,-45.6],[-22.8,-43.2],[-22.8,16.8],[-22.8,19.2],[-22.8,21.6],[-22.8,24.0],[-22.8,26.4],[-22.8,28.8],[-22.8,31.2],[-22.8,33.6],[-22.8,45.6],[-22.8,115.2],[-22.8,117.6],[-22.8,120.0],[-22.8,122.4],[-22.8,124.8],[-22.8,127.2],[-22.8,129.6],[-22.8,132.0],[-22.8,134.4],[-22.8,136.8],[-22.8,139.2],[-22.8,141.6],[-22.8,144.0],[-22.8,146.4],[-22.8,148.8],[-20.6,-69.4],[-20.6,-67.1],[-20.6,-64.7],[-20.6,-62.4],[-20.6,-60.0],[-20.6,-57.6],[-20.6,-55.3],[-20.6,-52.9],[-20.6,-50.6],[-20.6,-48.2],[-20.6,-45.9],[-20.6,-43.5],[-20.6,-41.2],[-20.6,15.3],[-20.6,17.6],[-20.6,20.0],[-20.6,22.4],[-20.6,24.7],[-20.6,27.1],[-20.6,29.4],[-20.6,31.8],[-20.6,34.1],[-20.6,45.9],[-20.6,48.2],[-20.6,118.8],[-20.6,121.2],[-20.6,123.5],[-20.6,125.9],[-20.6,128.2],[-20.6,130.6],[-20.6,132.9],[-20.6,135.3],[-20.6,137.6],[-20.6,140.0],[-20.6,142.4],[-20.6,144.7],[-20.6,147.1],[-18.4,-68.5],[-18.4,-66.2],[-18.4,-63.9],[-18.4,-61.5],[-18.4,-59.2],[-18.4,-56.9],[-18.4,-54.6],[-18.4,-52.3],[-18.4,-49.9],[-18.4,-47.6],[-18.4,-45.3],[-18.4,-43.0],[-18.4,-40.6],[-18.4,12.8],[-18.4,15.1],[-18.4,17.4],[-18.4,19.7],[-18.4,22.1],[-18.4,24.4],[-18.4,26.7],[-18.4,29.0],[-18.4,31.4],[-18.4,33.7],[-18.4,36.0],[-18.4,45.3],[-18.4,47.6],[-18.4,124.3],[-18.4,126.6],[-18.4,128.9],[-18.4,131.2],[-18.4,133.5],[-18.4,135.9],[-18.4,138.2],[-18.4,140.5],[-18.4,142.8],[-18.4,145.2],[-16.2,-72.2],[-16.2,-69.9],[-16.2,-67.6],[-16.2,-65.4],[-16.2,-63.1],[-16.2,-60.8],[-16.2,-58.5],[-16.2,-56.2],[-16.2,-53.9],[-16.2,-51.6],[-16.2,-49.3],[-16.2,-47.0],[-16.2,-44.7],[-16.2,-42.4],[-16.2,-40.1],[-16.2,12.6],[-16.2,14.9],[-16.2,17.2],[-16.2,19.5],[-16.2,21.8],[-16.2,24.1],[-16.2,26.4],[-16.2,28.7],[-16.2,31.0],[-16.2,33.2],[-16.2,35.5],[-16.2,37.8],[-16.2,47.0],[-16.2,49.3],[-16.2,125.0],[-16.2,127.3],[-16.2,129.6],[-16.2,131.8],[-16.2,134.1],[-16.2,136.4],[-16.2,143.3],[-14.0,-75.2],[-14.0,-72.9],[-14.0,-70.6],[-14.0,-68.4],[-14.0,-66.1],[-14.0,-63.8],[-14.0,-61.5],[-14.0,-59.2],[-14.0,-57.0],[-14.0,-54.7],[-14.0,-52.4],[-14.0,-50.1],[-14.0,-47.8],[-14.0,-45.6],[-14.0,-43.3],[-14.0,-41.0],[-14.0,13.7],[-14.0,15.9],[-14.0,18.2],[-14.0,20.5],[-14.0,22.8],[-14.0,25.1],[-14.0,27.3],[-14.0,29.6],[-14.0,31.9],[-14.0,34.2],[-14.0,36.5],[-14.0,38.7],[-14.0,50.1],[-14.0,129.9],[-14.0,132.2],[-14.0,134.4],[-14.0,136.7],[-14.0,143.5],[-11.8,-76.5],[-11.8,-74.2],[-11.8,-72.0],[-11.8,-69.8],[-11.8,-67.5],[-11.8,-65.2],[-11.8,-63.0],[-11.8,-60.8],[-11.8,-58.5],[-11.8,-56.2],[-11.8,-54.0],[-11.8,-51.8],[-11.8,-49.5],[-11.8,-47.2],[-11.8,-45.0],[-11.8,-42.8],[-11.8,-40.5],[-11.8,-38.2],[-11.8,15.8],[-11.8,18.0],[-11.8,20.2],[-11.8,22.5],[-11.8,24.8],[-11.8,27.0],[-11.8,29.2],[-11.8,31.5],[-11.8,33.8],[-11.8,36.0],[-11.8,38.2],[-11.8,130.5],[-11.8,132.8],[-9.6,-77.1],[-9.6,-74.9],[-9.6,-72.7],[-9.6,-70.4],[-9.6,-68.2],[-9.6,-66.0],[-9.6,-63.7],[-9.6,-61.5],[-9.6,-59.3],[-9.6,-57.0],[-9.6,-54.8],[-9.6,-52.5],[-9.6,-50.3],[-9.6,-48.1],[-9.6,-45.8],[-9.6,-43.6],[-9.6,-41.4],[-9.6,-39.1],[-9.6,-36.9],[-9.6,14.5],[-9.6,16.8],[-9.6,19.0],[-9.6,21.2],[-9.6,23.5],[-9.6,25.7],[-9.6,28.0],[-9.6,30.2],[-9.6,32.4],[-9.6,34.7],[-9.6,36.9],[-9.6,39.1],[-9.6,119.6],[-9.6,124.1],[-9.6,148.7],[-9.6,159.9],[-7.4,-77.8],[-7.4,-75.6],[-7.4,-73.3],[-7.4,-71.1],[-7.4,-68.9],[-7.4,-66.7],[-7.4,-64.4],[-7.4,-62.2],[-7.4,-60.0],[-7.4,-57.8],[-7.4,-55.6],[-7.4,-53.3],[-7.4,-51.1],[-7.4,-48.9],[-7.4,-46.7],[-7.4,-44.4],[-7.4,-42.2],[-7.4,-40.0],[-7.4,-37.8],[-7.4,-35.6],[-7.4,13.3],[-7.4,15.6],[-7.4,17.8],[-7.4,20.0],[-7.4,22.2],[-7.4,24.4],[-7.4,26.7],[-7.4,28.9],[-7.4,31.1],[-7.4,33.3],[-7.4,35.6],[-7.4,37.8],[-7.4,106.7],[-7.4,108.9],[-7.4,111.1],[-7.4,140.0],[-7.4,142.2],[-7.4,144.4],[-7.4,146.7],[-7.4,155.6],[-7.4,157.8],[-5.2,-80.0],[-5.2,-77.8],[-5.2,-75.6],[-5.2,-73.3],[-5.2,-71.1],[-5.2,-68.9],[-5.2,-66.7],[-5.2,-64.4],[-5.2,-62.2],[-5.2,-60.0],[-5.2,-57.8],[-5.2,-55.6],[-5.2,-53.3],[-5.2,-51.1],[-5.2,-48.9],[-5.2,-46.7],[-5.2,-44.4],[-5.2,-42.2],[-5.2,-40.0],[-5.2,-37.8],[-5.2,-35.6],[-5.2,13.3],[-5.2,15.6],[-5.2,17.8],[-5.2,20.0],[-5.2,22.2],[-5.2,24.4],[-5.2,26.7],[-5.2,28.9],[-5.2,31.1],[-5.2,33.3],[-5.2,35.6],[-5.2,37.8],[-5.2,104.4],[-5.2,120.0],[-5.2,137.8],[-5.2,140.0],[-5.2,142.2],[-5.2,144.4],[-5.2,151.1],[-3.0,-78.4],[-3.0,-76.2],[-3.0,-74.0],[-3.0,-71.8],[-3.0,-69.6],[-3.0,-67.4],[-3.0,-65.2],[-3.0,-62.9],[-3.0,-60.7],[-3.0,-58.5],[-3.0,-56.3],[-3.0,-54.1],[-3.0,-51.9],[-3.0,-49.7],[-3.0,-47.5],[-3.0,-45.3],[-3.0,-43.1],[-3.0,-40.9],[-3.0,12.1],[-3.0,14.4],[-3.0,16.6],[-3.0,18.8],[-3.0,21.0],[-3.0,23.2],[-3.0,25.4],[-3.0,27.6],[-3.0,29.8],[-3.0,32.0],[-3.0,34.2],[-3.0,36.4],[-3.0,38.7],[-3.0,102.7],[-3.0,104.9],[-3.0,111.5],[-3.0,113.7],[-3.0,116.0],[-3.0,129.2],[-3.0,133.6],[-3.0,138.0],[-3.0,140.2],[-3.0,151.3],[-0.8,-89.4],[-0.8,-78.4],[-0.8,-76.2],[-0.8,-74.0],[-0.8,-71.8],[-0.8,-69.6],[-0.8,-67.4],[-0.8,-65.2],[-0.8,-62.9],[-0.8,-60.7],[-0.8,-58.5],[-0.8,-56.3],[-0.8,-54.1],[-0.8,-51.9],[-0.8,-49.7],[-0.8,-47.5],[-0.8,9.9],[-0.8,12.1],[-0.8,14.4],[-0.8,16.6],[-0.8,18.8],[-0.8,21.0],[-0.8,23.2],[-0.8,25.4],[-0.8,27.6],[-0.8,29.8],[-0.8,32.0],[-0.8,34.2],[-0.8,36.4],[-0.8,38.7],[-0.8,40.9],[-0.8,100.5],[-0.8,102.7],[-0.8,109.3],[-0.8,111.5],[-0.8,113.7],[-0.8,116.0],[-0.8,122.6],[-0.8,131.4],[-0.8,133.6],[-0.8,135.8],[1.4,-78.4],[1.4,-76.2],[1.4,-74.0],[1.4,-71.8],[1.4,-69.6],[1.4,-67.4],[1.4,-65.2],[1.4,-62.9],[1.4,-60.7],[1.4,-58.5],[1.4,-56.3],[1.4,-54.1],[1.4,-51.9],[1.4,9.9],[1.4,12.1],[1.4,14.4],[1.4,16.6],[1.4,18.8],[1.4,21.0],[1.4,23.2],[1.4,25.4],[1.4,27.6],[1.4,29.8],[1.4,32.0],[1.4,34.2],[1.4,36.4],[1.4,38.7],[1.4,40.9],[1.4,43.1],[1.4,100.5],[1.4,109.3],[1.4,111.5],[1.4,113.7],[1.4,116.0],[1.4,118.2],[1.4,124.8],[3.6,-76.2],[3.6,-74.0],[3.6,-71.8],[3.6,-69.6],[3.6,-67.4],[3.6,-65.2],[3.6,-62.9],[3.6,-60.7],[3.6,-58.5],[3.6,-56.3],[3.6,-54.1],[3.6,-51.9],[3.6,9.9],[3.6,12.1],[3.6,14.4],[3.6,16.6],[3.6,18.8],[3.6,21.0],[3.6,23.2],[3.6,25.4],[3.6,27.6],[3.6,29.8],[3.6,32.0],[3.6,34.2],[3.6,36.4],[3.6,38.7],[3.6,40.9],[3.6,43.1],[3.6,45.3],[3.6,98.3],[3.6,102.7],[3.6,113.7],[3.6,116.0],[5.8,-75.6],[5.8,-73.3],[5.8,-71.1],[5.8,-68.9],[5.8,-66.7],[5.8,-64.4],[5.8,-62.2],[5.8,-60.0],[5.8,-57.8],[5.8,-55.6],[5.8,-8.9],[5.8,-6.7],[5.8,-4.4],[5.8,-2.2],[5.8,0.0],[5.8,6.7],[5.8,8.9],[5.8,11.1],[5.8,13.3],[5.8,15.6],[5.8,17.8],[5.8,20.0],[5.8,22.2],[5.8,24.4],[5.8,26.7],[5.8,28.9],[5.8,31.1],[5.8,33.3],[5.8,35.6],[5.8,37.8],[5.8,40.0],[5.8,42.2],[5.8,44.4],[5.8,46.7],[5.8,102.2],[5.8,117.8],[8.0,-77.8],[8.0,-75.6],[8.0,-73.3],[8.0,-71.1],[8.0,-68.9],[8.0,-66.7],[8.0,-64.4],[8.0,-62.2],[8.0,-60.0],[8.0,-11.1],[8.0,-8.9],[8.0,-6.7],[8.0,-4.4],[8.0,-2.2],[8.0,0.0],[8.0,2.2],[8.0,4.4],[8.0,6.7],[8.0,8.9],[8.0,11.1],[8.0,13.3],[8.0,15.6],[8.0,17.8],[8.0,20.0],[8.0,22.2],[8.0,24.4],[8.0,26.7],[8.0,28.9],[8.0,31.1],[8.0,33.3],[8.0,35.6],[8.0,37.8],[8.0,40.0],[8.0,42.2],[8.0,44.4],[8.0,46.7],[8.0,48.9],[8.0,80.0],[8.0,93.3],[8.0,100.0],[8.0,124.4],[10.2,-83.9],[10.2,-74.9],[10.2,-72.7],[10.2,-70.4],[10.2,-68.2],[10.2,-66.0],[10.2,-63.7],[10.2,-61.5],[10.2,-12.3],[10.2,-10.1],[10.2,-7.8],[10.2,-5.6],[10.2,-3.4],[10.2,-1.1],[10.2,1.1],[10.2,3.4],[10.2,5.6],[10.2,7.8],[10.2,10.1],[10.2,12.3],[10.2,14.5],[10.2,16.8],[10.2,19.0],[10.2,21.2],[10.2,23.5],[10.2,25.7],[10.2,28.0],[10.2,30.2],[10.2,32.4],[10.2,34.7],[10.2,36.9],[10.2,39.1],[10.2,41.4],[10.2,43.6],[10.2,45.8],[10.2,48.1],[10.2,50.3],[10.2,77.1],[10.2,104.0],[10.2,106.2],[12.4,-84.9],[12.4,-14.7],[12.4,-12.5],[12.4,-10.2],[12.4,-7.9],[12.4,-5.7],[12.4,-3.4],[12.4,-1.1],[12.4,1.1],[12.4,3.4],[12.4,5.7],[12.4,7.9],[12.4,10.2],[12.4,12.5],[12.4,14.7],[12.4,17.0],[12.4,19.2],[12.4,21.5],[12.4,23.8],[12.4,26.0],[12.4,28.3],[12.4,30.6],[12.4,32.8],[12.4,35.1],[12.4,37.4],[12.4,39.6],[12.4,41.9],[12.4,75.8],[12.4,78.1],[12.4,98.5],[12.4,103.0],[12.4,105.3],[12.4,107.5],[12.4,121.1],[12.4,123.4],[14.6,-91.1],[14.6,-88.9],[14.6,-86.6],[14.6,-84.3],[14.6,-15.9],[14.6,-13.7],[14.6,-11.4],[14.6,-9.1],[14.6,-6.8],[14.6,-4.6],[14.6,-2.3],[14.6,0.0],[14.6,2.3],[14.6,4.6],[14.6,6.8],[14.6,9.1],[14.6,11.4],[14.6,13.7],[14.6,15.9],[14.6,18.2],[14.6,20.5],[14.6,22.8],[14.6,25.1],[14.6,27.3],[14.6,29.6],[14.6,31.9],[14.6,34.2],[14.6,36.5],[14.6,38.7],[14.6,41.0],[14.6,43.3],[14.6,45.6],[14.6,47.8],[14.6,75.2],[14.6,77.5],[14.6,79.7],[14.6,98.0],[14.6,100.3],[14.6,102.5],[14.6,104.8],[14.6,107.1],[16.8,-99.2],[16.8,-96.9],[16.8,-94.6],[16.8,-92.3],[16.8,-90.0],[16.8,-16.2],[16.8,-13.8],[16.8,-11.5],[16.8,-9.2],[16.8,-6.9],[16.8,-4.6],[16.8,-2.3],[16.8,0.0],[16.8,2.3],[16.8,4.6],[16.8,6.9],[16.8,9.2],[16.8,11.5],[16.8,13.8],[16.8,16.2],[16.8,18.5],[16.8,20.8],[16.8,23.1],[16.8,25.4],[16.8,27.7],[16.8,30.0],[16.8,32.3],[16.8,34.6],[16.8,36.9],[16.8,43.8],[16.8,46.2],[16.8,48.5],[16.8,50.8],[16.8,53.1],[16.8,73.8],[16.8,76.2],[16.8,78.5],[16.8,80.8],[16.8,94.6],[16.8,99.2],[16.8,101.5],[16.8,103.8],[16.8,106.2],[16.8,122.3],[19.0,-102.9],[19.0,-100.5],[19.0,-98.2],[19.0,-91.2],[19.0,-88.8],[19.0,-72.5],[19.0,-70.1],[19.0,-14.0],[19.0,-11.7],[19.0,-9.4],[19.0,-7.0],[19.0,-4.7],[19.0,-2.3],[19.0,0.0],[19.0,2.3],[19.0,4.7],[19.0,7.0],[19.0,9.4],[19.0,11.7],[19.0,14.0],[19.0,16.4],[19.0,18.7],[19.0,21.0],[19.0,23.4],[19.0,25.7],[19.0,28.1],[19.0,30.4],[19.0,32.7],[19.0,35.1],[19.0,37.4],[19.0,42.1],[19.0,44.4],[19.0,46.8],[19.0,49.1],[19.0,51.4],[19.0,53.8],[19.0,56.1],[19.0,74.8],[19.0,77.1],[19.0,79.5],[19.0,81.8],[19.0,84.2],[19.0,95.8],[19.0,98.2],[19.0,100.5],[19.0,102.9],[19.0,105.2],[19.0,109.9],[21.2,-104.2],[21.2,-101.8],[21.2,-99.5],[21.2,-87.6],[21.2,-78.2],[21.2,-16.6],[21.2,-14.2],[21.2,-11.8],[21.2,-9.5],[21.2,-7.1],[21.2,-4.7],[21.2,-2.4],[21.2,0.0],[21.2,2.4],[21.2,4.7],[21.2,7.1],[21.2,9.5],[21.2,11.8],[21.2,14.2],[21.2,16.6],[21.2,18.9],[21.2,21.3],[21.2,23.7],[21.2,26.1],[21.2,28.4],[21.2,30.8],[21.2,33.2],[21.2,35.5],[21.2,40.3],[21.2,42.6],[21.2,45.0],[21.2,47.4],[21.2,49.7],[21.2,52.1],[21.2,54.5],[21.2,56.8],[21.2,71.1],[21.2,73.4],[21.2,75.8],[21.2,78.2],[21.2,80.5],[21.2,82.9],[21.2,85.3],[21.2,92.4],[21.2,94.7],[21.2,97.1],[21.2,99.5],[21.2,101.8],[21.2,104.2],[21.2,106.6],[23.4,-105.6],[23.4,-103.2],[23.4,-100.8],[23.4,-98.4],[23.4,-14.4],[23.4,-12.0],[23.4,-9.6],[23.4,-7.2],[23.4,-4.8],[23.4,-2.4],[23.4,0.0],[23.4,2.4],[23.4,4.8],[23.4,7.2],[23.4,9.6],[23.4,12.0],[23.4,14.4],[23.4,16.8],[23.4,19.2],[23.4,21.6],[23.4,24.0],[23.4,26.4],[23.4,28.8],[23.4,31.2],[23.4,33.6],[23.4,40.8],[23.4,43.2],[23.4,45.6],[23.4,48.0],[23.4,50.4],[23.4,52.8],[23.4,55.2],[23.4,57.6],[23.4,69.6],[23.4,72.0],[23.4,74.4],[23.4,76.8],[23.4,79.2],[23.4,81.6],[23.4,84.0],[23.4,86.4],[23.4,88.8],[23.4,91.2],[23.4,93.6],[23.4,96.0],[23.4,98.4],[23.4,100.8],[23.4,103.2],[23.4,105.6],[23.4,108.0],[23.4,110.4],[23.4,112.8],[23.4,115.2],[25.6,-111.4],[25.6,-109.0],[25.6,-106.5],[25.6,-104.1],[25.6,-101.6],[25.6,-99.2],[25.6,-13.5],[25.6,-11.0],[25.6,-8.6],[25.6,-6.1],[25.6,-3.7],[25.6,-1.2],[25.6,1.2],[25.6,3.7],[25.6,6.1],[25.6,8.6],[25.6,11.0],[25.6,13.5],[25.6,15.9],[25.6,18.4],[25.6,20.8],[25.6,23.3],[25.6,25.7],[25.6,28.2],[25.6,30.6],[25.6,33.1],[25.6,38.0],[25.6,40.4],[25.6,42.9],[25.6,45.3],[25.6,47.8],[25.6,50.2],[25.6,60.0],[25.6,62.4],[25.6,64.9],[25.6,67.3],[25.6,69.8],[25.6,72.2],[25.6,74.7],[25.6,77.1],[25.6,79.6],[25.6,82.0],[25.6,84.5],[25.6,86.9],[25.6,89.4],[25.6,91.8],[25.6,94.3],[25.6,96.7],[25.6,99.2],[25.6,101.6],[25.6,104.1],[25.6,106.5],[25.6,109.0],[25.6,111.4],[25.6,113.9],[25.6,116.3],[25.6,118.8],[27.8,-115.0],[27.8,-110.0],[27.8,-107.5],[27.8,-105.0],[27.8,-102.5],[27.8,-100.0],[27.8,-97.5],[27.8,-12.5],[27.8,-10.0],[27.8,-7.5],[27.8,-5.0],[27.8,-2.5],[27.8,0.0],[27.8,2.5],[27.8,5.0],[27.8,7.5],[27.8,10.0],[27.8,12.5],[27.8,15.0],[27.8,17.5],[27.8,20.0],[27.8,22.5],[27.8,25.0],[27.8,27.5],[27.8,30.0],[27.8,32.5],[27.8,37.5],[27.8,40.0],[27.8,42.5],[27.8,45.0],[27.8,47.5],[27.8,52.5],[27.8,55.0],[27.8,57.5],[27.8,60.0],[27.8,62.5],[27.8,65.0],[27.8,67.5],[27.8,70.0],[27.8,72.5],[27.8,75.0],[27.8,77.5],[27.8,80.0],[27.8,82.5],[27.8,85.0],[27.8,87.5],[27.8,90.0],[27.8,92.5],[27.8,95.0],[27.8,97.5],[27.8,100.0],[27.8,102.5],[27.8,105.0],[27.8,107.5],[27.8,110.0],[27.8,112.5],[27.8,115.0],[27.8,117.5],[27.8,120.0],[30.0,-111.1],[30.0,-108.5],[30.0,-106.0],[30.0,-103.4],[30.0,-100.9],[30.0,-98.3],[30.0,-95.7],[30.0,-93.2],[30.0,-90.6],[30.0,-83.0],[30.0,-8.9],[30.0,-6.4],[30.0,-3.8],[30.0,-1.3],[30.0,1.3],[30.0,3.8],[30.0,6.4],[30.0,8.9],[30.0,11.5],[30.0,14.0],[30.0,16.6],[30.0,19.1],[30.0,21.7],[30.0,24.3],[30.0,26.8],[30.0,29.4],[30.0,31.9],[30.0,34.5],[30.0,37.0],[30.0,39.6],[30.0,42.1],[30.0,44.7],[30.0,47.2],[30.0,52.3],[30.0,54.9],[30.0,57.4],[30.0,60.0],[30.0,62.6],[30.0,65.1],[30.0,67.7],[30.0,70.2],[30.0,72.8],[30.0,75.3],[30.0,77.9],[30.0,80.4],[30.0,83.0],[30.0,85.5],[30.0,88.1],[30.0,90.6],[30.0,93.2],[30.0,95.7],[30.0,98.3],[30.0,100.9],[30.0,103.4],[30.0,106.0],[30.0,108.5],[30.0,111.1],[30.0,113.6],[30.0,116.2],[30.0,118.7],[30.0,121.3],[32.2,-114.8],[32.2,-112.2],[32.2,-109.6],[32.2,-107.0],[32.2,-104.3],[32.2,-101.7],[32.2,-99.1],[32.2,-96.5],[32.2,-93.9],[32.2,-91.3],[32.2,-88.7],[32.2,-86.1],[32.2,-83.5],[32.2,-80.9],[32.2,-7.8],[32.2,-5.2],[32.2,-2.6],[32.2,0.0],[32.2,2.6],[32.2,5.2],[32.2,7.8],[32.2,10.4],[32.2,13.0],[32.2,20.9],[32.2,36.5],[32.2,39.1],[32.2,41.7],[32.2,44.3],[32.2,47.0],[32.2,49.6],[32.2,52.2],[32.2,54.8],[32.2,57.4],[32.2,60.0],[32.2,62.6],[32.2,65.2],[32.2,67.8],[32.2,70.4],[32.2,73.0],[32.2,75.7],[32.2,78.3],[32.2,80.9],[32.2,83.5],[32.2,86.1],[32.2,88.7],[32.2,91.3],[32.2,93.9],[32.2,96.5],[32.2,99.1],[32.2,101.7],[32.2,104.3],[32.2,107.0],[32.2,109.6],[32.2,112.2],[32.2,114.8],[32.2,117.4],[32.2,120.0],[32.2,130.4],[34.4,-118.7],[34.4,-116.0],[34.4,-113.3],[34.4,-110.7],[34.4,-108.0],[34.4,-105.3],[34.4,-102.7],[34.4,-100.0],[34.4,-97.3],[34.4,-94.7],[34.4,-92.0],[34.4,-89.3],[34.4,-86.7],[34.4,-84.0],[34.4,-81.3],[34.4,-78.7],[34.4,-4.0],[34.4,-1.3],[34.4,1.3],[34.4,4.0],[34.4,6.7],[34.4,9.3],[34.4,36.0],[34.4,38.7],[34.4,41.3],[34.4,44.0],[34.4,46.7],[34.4,49.3],[34.4,52.0],[34.4,54.7],[34.4,57.3],[34.4,60.0],[34.4,62.7],[34.4,65.3],[34.4,68.0],[34.4,70.7],[34.4,73.3],[34.4,76.0],[34.4,78.7],[34.4,81.3],[34.4,84.0],[34.4,86.7],[34.4,89.3],[34.4,92.0],[34.4,94.7],[34.4,97.3],[34.4,100.0],[34.4,102.7],[34.4,105.3],[34.4,108.0],[34.4,110.7],[34.4,113.3],[34.4,116.0],[34.4,118.7],[34.4,129.3],[34.4,132.0],[36.6,-119.5],[36.6,-116.8],[36.6,-114.0],[36.6,-111.3],[36.6,-108.5],[36.6,-105.8],[36.6,-103.1],[36.6,-100.3],[36.6,-97.6],[36.6,-94.8],[36.6,-92.1],[36.6,-89.3],[36.6,-86.6],[36.6,-83.8],[36.6,-81.1],[36.6,-78.3],[36.6,4.1],[36.6,6.9],[36.6,9.6],[36.6,28.9],[36.6,37.1],[36.6,39.8],[36.6,42.6],[36.6,45.3],[36.6,48.1],[36.6,50.8],[36.6,53.6],[36.6,56.3],[36.6,59.1],[36.6,61.8],[36.6,64.6],[36.6,67.3],[36.6,70.1],[36.6,72.8],[36.6,75.6],[36.6,78.3],[36.6,81.1],[36.6,83.8],[36.6,86.6],[36.6,89.3],[36.6,92.1],[36.6,94.8],[36.6,97.6],[36.6,100.3],[36.6,103.1],[36.6,105.8],[36.6,108.5],[36.6,111.3],[36.6,114.0],[36.6,116.8],[36.6,119.5],[36.6,127.8],[36.6,138.8],[38.8,-123.3],[38.8,-120.5],[38.8,-117.6],[38.8,-114.8],[38.8,-112.0],[38.8,-109.1],[38.8,-106.3],[38.8,-103.5],[38.8,-100.6],[38.8,-97.8],[38.8,-95.0],[38.8,-92.1],[38.8,-89.3],[38.8,-86.5],[38.8,-83.6],[38.8,-80.8],[38.8,-78.0],[38.8,-7.1],[38.8,-4.3],[38.8,-1.4],[38.8,21.3],[38.8,26.9],[38.8,29.8],[38.8,32.6],[38.8,35.4],[38.8,38.3],[38.8,41.1],[38.8,43.9],[38.8,46.8],[38.8,49.6],[38.8,52.4],[38.8,55.3],[38.8,58.1],[38.8,60.9],[38.8,63.8],[38.8,66.6],[38.8,69.4],[38.8,72.3],[38.8,75.1],[38.8,78.0],[38.8,80.8],[38.8,83.6],[38.8,86.5],[38.8,89.3],[38.8,92.1],[38.8,95.0],[38.8,97.8],[38.8,100.6],[38.8,103.5],[38.8,106.3],[38.8,109.1],[38.8,112.0],[38.8,114.8],[38.8,126.1],[38.8,140.3],[41.0,-121.5],[41.0,-118.5],[41.0,-115.6],[41.0,-112.7],[41.0,-109.8],[41.0,-106.8],[41.0,-103.9],[41.0,-101.0],[41.0,-98.0],[41.0,-95.1],[41.0,-92.2],[41.0,-89.3],[41.0,-86.3],[41.0,-83.4],[41.0,-80.5],[41.0,-77.6],[41.0,-74.6],[41.0,-7.3],[41.0,-4.4],[41.0,-1.5],[41.0,16.1],[41.0,22.0],[41.0,24.9],[41.0,30.7],[41.0,33.7],[41.0,36.6],[41.0,39.5],[41.0,42.4],[41.0,45.4],[41.0,48.3],[41.0,51.2],[41.0,54.1],[41.0,57.1],[41.0,60.0],[41.0,62.9],[41.0,65.9],[41.0,68.8],[41.0,71.7],[41.0,74.6],[41.0,77.6],[41.0,80.5],[41.0,83.4],[41.0,86.3],[41.0,89.3],[41.0,92.2],[41.0,95.1],[41.0,98.0],[41.0,101.0],[41.0,103.9],[41.0,106.8],[41.0,109.8],[41.0,112.7],[41.0,115.6],[41.0,118.5],[41.0,121.5],[41.0,124.4],[41.0,127.3],[43.2,-122.5],[43.2,-119.5],[43.2,-116.5],[43.2,-113.4],[43.2,-110.4],[43.2,-107.4],[43.2,-104.4],[43.2,-101.3],[43.2,-98.3],[43.2,-95.3],[43.2,-92.3],[43.2,-89.2],[43.2,-86.2],[43.2,-83.2],[43.2,-80.2],[43.2,-77.1],[43.2,-74.1],[43.2,-71.1],[43.2,-7.6],[43.2,-4.5],[43.2,-1.5],[43.2,1.5],[43.2,10.6],[43.2,13.6],[43.2,16.6],[43.2,19.7],[43.2,22.7],[43.2,25.7],[43.2,40.8],[43.2,43.9],[43.2,46.9],[43.2,49.9],[43.2,52.9],[43.2,56.0],[43.2,59.0],[43.2,62.0],[43.2,65.0],[43.2,68.1],[43.2,71.1],[43.2,74.1],[43.2,77.1],[43.2,80.2],[43.2,83.2],[43.2,86.2],[43.2,89.2],[43.2,92.3],[43.2,95.3],[43.2,98.3],[43.2,101.3],[43.2,104.4],[43.2,107.4],[43.2,110.4],[43.2,113.4],[43.2,116.5],[43.2,119.5],[43.2,122.5],[43.2,125.5],[43.2,128.6],[43.2,131.6],[43.2,140.7],[43.2,143.7],[45.4,-123.2],[45.4,-120.0],[45.4,-116.8],[45.4,-113.7],[45.4,-110.5],[45.4,-107.4],[45.4,-104.2],[45.4,-101.1],[45.4,-97.9],[45.4,-94.7],[45.4,-91.6],[45.4,-88.4],[45.4,-85.3],[45.4,-82.1],[45.4,-78.9],[45.4,-75.8],[45.4,-72.6],[45.4,-69.5],[45.4,-66.3],[45.4,-63.2],[45.4,0.0],[45.4,3.2],[45.4,6.3],[45.4,9.5],[45.4,15.8],[45.4,18.9],[45.4,22.1],[45.4,25.3],[45.4,28.4],[45.4,34.7],[45.4,37.9],[45.4,41.1],[45.4,44.2],[45.4,47.4],[45.4,50.5],[45.4,53.7],[45.4,56.8],[45.4,60.0],[45.4,63.2],[45.4,66.3],[45.4,69.5],[45.4,72.6],[45.4,75.8],[45.4,78.9],[45.4,82.1],[45.4,85.3],[45.4,88.4],[45.4,91.6],[45.4,94.7],[45.4,97.9],[45.4,101.1],[45.4,104.2],[45.4,107.4],[45.4,110.5],[45.4,113.7],[45.4,116.8],[45.4,120.0],[45.4,123.2],[45.4,126.3],[45.4,129.5],[45.4,132.6],[45.4,135.8],[47.6,-124.4],[47.6,-121.1],[47.6,-117.8],[47.6,-114.5],[47.6,-111.3],[47.6,-108.0],[47.6,-104.7],[47.6,-101.5],[47.6,-98.2],[47.6,-94.9],[47.6,-91.6],[47.6,-88.4],[47.6,-85.1],[47.6,-81.8],[47.6,-78.5],[47.6,-75.3],[47.6,-72.0],[47.6,-68.7],[47.6,-65.5],[47.6,-58.9],[47.6,-55.6],[47.6,0.0],[47.6,3.3],[47.6,6.5],[47.6,9.8],[47.6,13.1],[47.6,16.4],[47.6,19.6],[47.6,22.9],[47.6,26.2],[47.6,29.5],[47.6,32.7],[47.6,36.0],[47.6,39.3],[47.6,42.5],[47.6,45.8],[47.6,49.1],[47.6,52.4],[47.6,55.6],[47.6,58.9],[47.6,62.2],[47.6,65.5],[47.6,68.7],[47.6,72.0],[47.6,75.3],[47.6,78.5],[47.6,81.8],[47.6,85.1],[47.6,88.4],[47.6,91.6],[47.6,94.9],[47.6,98.2],[47.6,101.5],[47.6,104.7],[47.6,108.0],[47.6,111.3],[47.6,114.5],[47.6,117.8],[47.6,121.1],[47.6,124.4],[47.6,127.6],[47.6,130.9],[47.6,134.2],[47.6,137.5],[49.8,-125.1],[49.8,-121.7],[49.8,-118.3],[49.8,-114.9],[49.8,-111.4],[49.8,-108.0],[49.8,-104.6],[49.8,-101.1],[49.8,-97.7],[49.8,-94.3],[49.8,-90.9],[49.8,-87.4],[49.8,-84.0],[49.8,-80.6],[49.8,-77.1],[49.8,-73.7],[49.8,-70.3],[49.8,-63.4],[49.8,-56.6],[49.8,1.7],[49.8,5.1],[49.8,8.6],[49.8,12.0],[49.8,15.4],[49.8,18.9],[49.8,22.3],[49.8,25.7],[49.8,29.1],[49.8,32.6],[49.8,36.0],[49.8,39.4],[49.8,42.9],[49.8,46.3],[49.8,49.7],[49.8,53.1],[49.8,56.6],[49.8,60.0],[49.8,63.4],[49.8,66.9],[49.8,70.3],[49.8,73.7],[49.8,77.1],[49.8,80.6],[49.8,84.0],[49.8,87.4],[49.8,90.9],[49.8,94.3],[49.8,97.7],[49.8,101.1],[49.8,104.6],[49.8,108.0],[49.8,111.4],[49.8,114.9],[49.8,118.3],[49.8,121.7],[49.8,125.1],[49.8,128.6],[49.8,132.0],[49.8,135.4],[49.8,138.9],[49.8,142.3],[52.0,-126.0],[52.0,-122.4],[52.0,-118.8],[52.0,-115.2],[52.0,-111.6],[52.0,-108.0],[52.0,-104.4],[52.0,-100.8],[52.0,-97.2],[52.0,-93.6],[52.0,-90.0],[52.0,-86.4],[52.0,-82.8],[52.0,-79.2],[52.0,-75.6],[52.0,-72.0],[52.0,-68.4],[52.0,-64.8],[52.0,-61.2],[52.0,-57.6],[52.0,-3.6],[52.0,0.0],[52.0,7.2],[52.0,10.8],[52.0,14.4],[52.0,18.0],[52.0,21.6],[52.0,25.2],[52.0,28.8],[52.0,32.4],[52.0,36.0],[52.0,39.6],[52.0,43.2],[52.0,46.8],[52.0,50.4],[52.0,54.0],[52.0,57.6],[52.0,61.2],[52.0,64.8],[52.0,68.4],[52.0,72.0],[52.0,75.6],[52.0,79.2],[52.0,82.8],[52.0,86.4],[52.0,90.0],[52.0,93.6],[52.0,97.2],[52.0,100.8],[52.0,104.4],[52.0,108.0],[52.0,111.6],[52.0,115.2],[52.0,118.8],[52.0,122.4],[52.0,126.0],[52.0,129.6],[52.0,133.2],[52.0,136.8],[52.0,140.4],[54.2,-164.8],[54.2,-126.9],[54.2,-123.2],[54.2,-119.4],[54.2,-115.6],[54.2,-111.8],[54.2,-108.0],[54.2,-104.2],[54.2,-100.4],[54.2,-96.6],[54.2,-92.8],[54.2,-89.1],[54.2,-85.3],[54.2,-77.7],[54.2,-73.9],[54.2,-70.1],[54.2,-66.3],[54.2,-62.5],[54.2,-58.7],[54.2,-9.5],[54.2,-1.9],[54.2,9.5],[54.2,13.3],[54.2,17.1],[54.2,20.8],[54.2,24.6],[54.2,28.4],[54.2,32.2],[54.2,36.0],[54.2,39.8],[54.2,43.6],[54.2,47.4],[54.2,51.2],[54.2,54.9],[54.2,58.7],[54.2,62.5],[54.2,66.3],[54.2,70.1],[54.2,73.9],[54.2,77.7],[54.2,81.5],[54.2,85.3],[54.2,89.1],[54.2,92.8],[54.2,96.6],[54.2,100.4],[54.2,104.2],[54.2,108.0],[54.2,111.8],[54.2,115.6],[54.2,119.4],[54.2,123.2],[54.2,126.9],[54.2,130.7],[54.2,134.5],[54.2,157.3],[56.4,-160.0],[56.4,-132.0],[56.4,-128.0],[56.4,-124.0],[56.4,-120.0],[56.4,-116.0],[56.4,-112.0],[56.4,-108.0],[56.4,-104.0],[56.4,-100.0],[56.4,-96.0],[56.4,-92.0],[56.4,-88.0],[56.4,-76.0],[56.4,-72.0],[56.4,-68.0],[56.4,-64.0],[56.4,-4.0],[56.4,16.0],[56.4,24.0],[56.4,28.0],[56.4,32.0],[56.4,36.0],[56.4,40.0],[56.4,44.0],[56.4,48.0],[56.4,52.0],[56.4,56.0],[56.4,60.0],[56.4,64.0],[56.4,68.0],[56.4,72.0],[56.4,76.0],[56.4,80.0],[56.4,84.0],[56.4,88.0],[56.4,92.0],[56.4,96.0],[56.4,100.0],[56.4,104.0],[56.4,108.0],[56.4,112.0],[56.4,116.0],[56.4,120.0],[56.4,124.0],[56.4,128.0],[56.4,132.0],[56.4,136.0],[56.4,156.0],[56.4,160.0],[58.6,-158.8],[58.6,-154.6],[58.6,-133.4],[58.6,-129.2],[58.6,-124.9],[58.6,-120.7],[58.6,-116.5],[58.6,-112.2],[58.6,-108.0],[58.6,-103.8],[58.6,-99.5],[58.6,-95.3],[58.6,-78.4],[58.6,-74.1],[58.6,-69.9],[58.6,-65.6],[58.6,6.4],[58.6,14.8],[58.6,23.3],[58.6,27.5],[58.6,31.8],[58.6,36.0],[58.6,40.2],[58.6,44.5],[58.6,48.7],[58.6,52.9],[58.6,57.2],[58.6,61.4],[58.6,65.6],[58.6,69.9],[58.6,74.1],[58.6,78.4],[58.6,82.6],[58.6,86.8],[58.6,91.1],[58.6,95.3],[58.6,99.5],[58.6,103.8],[58.6,108.0],[58.6,112.2],[58.6,116.5],[58.6,120.7],[58.6,124.9],[58.6,129.2],[58.6,133.4],[58.6,137.6],[60.8,-161.8],[60.8,-157.2],[60.8,-152.7],[60.8,-148.1],[60.8,-143.5],[60.8,-139.0],[60.8,-134.4],[60.8,-129.9],[60.8,-125.3],[60.8,-120.8],[60.8,-116.2],[60.8,-111.6],[60.8,-107.1],[60.8,-102.5],[60.8,-98.0],[60.8,-75.2],[60.8,-70.6],[60.8,-47.8],[60.8,6.8],[60.8,11.4],[60.8,15.9],[60.8,25.1],[60.8,29.6],[60.8,34.2],[60.8,38.7],[60.8,43.3],[60.8,47.8],[60.8,52.4],[60.8,57.0],[60.8,61.5],[60.8,66.1],[60.8,70.6],[60.8,75.2],[60.8,79.7],[60.8,84.3],[60.8,88.9],[60.8,93.4],[60.8,98.0],[60.8,102.5],[60.8,107.1],[60.8,111.6],[60.8,116.2],[60.8,120.8],[60.8,125.3],[60.8,129.9],[60.8,134.4],[60.8,139.0],[60.8,143.5],[60.8,148.1],[60.8,152.7],[60.8,166.3],[60.8,170.9],[63.0,-160.5],[63.0,-155.7],[63.0,-150.8],[63.0,-145.9],[63.0,-141.1],[63.0,-136.2],[63.0,-131.4],[63.0,-126.5],[63.0,-121.6],[63.0,-116.8],[63.0,-111.9],[63.0,-107.0],[63.0,-102.2],[63.0,-97.3],[63.0,-92.4],[63.0,-68.1],[63.0,-48.6],[63.0,-43.8],[63.0,9.7],[63.0,14.6],[63.0,24.3],[63.0,29.2],[63.0,34.1],[63.0,38.9],[63.0,43.8],[63.0,48.6],[63.0,53.5],[63.0,58.4],[63.0,63.2],[63.0,68.1],[63.0,73.0],[63.0,77.8],[63.0,82.7],[63.0,87.6],[63.0,92.4],[63.0,97.3],[63.0,102.2],[63.0,107.0],[63.0,111.9],[63.0,116.8],[63.0,121.6],[63.0,126.5],[63.0,131.4],[63.0,136.2],[63.0,141.1],[63.0,145.9],[63.0,150.8],[63.0,155.7],[63.0,160.5],[63.0,165.4],[63.0,170.3],[63.0,175.1],[65.2,-180.0],[65.2,-174.7],[65.2,-164.1],[65.2,-158.8],[65.2,-153.5],[65.2,-148.2],[65.2,-142.9],[65.2,-137.6],[65.2,-132.4],[65.2,-127.1],[65.2,-121.8],[65.2,-116.5],[65.2,-111.2],[65.2,-105.9],[65.2,-100.6],[65.2,-95.3],[65.2,-90.0],[65.2,-84.7],[65.2,-74.1],[65.2,-68.8],[65.2,-63.5],[65.2,-47.6],[65.2,-42.4],[65.2,-21.2],[65.2,-15.9],[65.2,15.9],[65.2,21.2],[65.2,26.5],[65.2,31.8],[65.2,42.4],[65.2,47.6],[65.2,52.9],[65.2,58.2],[65.2,63.5],[65.2,68.8],[65.2,74.1],[65.2,79.4],[65.2,84.7],[65.2,90.0],[65.2,95.3],[65.2,100.6],[65.2,105.9],[65.2,111.2],[65.2,116.5],[65.2,121.8],[65.2,127.1],[65.2,132.4],[65.2,137.6],[65.2,142.9],[65.2,148.2],[65.2,153.5],[65.2,158.8],[65.2,164.1],[65.2,169.4],[65.2,174.7],[67.4,-180.0],[67.4,-162.6],[67.4,-156.8],[67.4,-151.0],[67.4,-145.2],[67.4,-139.4],[67.4,-133.5],[67.4,-127.7],[67.4,-121.9],[67.4,-116.1],[67.4,-110.3],[67.4,-104.5],[67.4,-98.7],[67.4,-92.9],[67.4,-81.3],[67.4,-75.5],[67.4,-69.7],[67.4,-52.3],[67.4,-46.5],[67.4,-40.6],[67.4,-34.8],[67.4,17.4],[67.4,23.2],[67.4,29.0],[67.4,34.8],[67.4,40.6],[67.4,52.3],[67.4,58.1],[67.4,63.9],[67.4,69.7],[67.4,75.5],[67.4,81.3],[67.4,87.1],[67.4,92.9],[67.4,98.7],[67.4,104.5],[67.4,110.3],[67.4,116.1],[67.4,121.9],[67.4,127.7],[67.4,133.5],[67.4,139.4],[67.4,145.2],[67.4,151.0],[67.4,156.8],[67.4,162.6],[67.4,168.4],[67.4,174.2],[69.6,-161.1],[69.6,-154.7],[69.6,-148.4],[69.6,-142.1],[69.6,-129.5],[69.6,-116.8],[69.6,-110.5],[69.6,-104.2],[69.6,-97.9],[69.6,-91.6],[69.6,-85.3],[69.6,-72.6],[69.6,-53.7],[69.6,-47.4],[69.6,-41.1],[69.6,-34.7],[69.6,-28.4],[69.6,22.1],[69.6,28.4],[69.6,78.9],[69.6,85.3],[69.6,91.6],[69.6,97.9],[69.6,104.2],[69.6,110.5],[69.6,116.8],[69.6,123.2],[69.6,129.5],[69.6,135.8],[69.6,142.1],[69.6,148.4],[69.6,154.7],[69.6,167.4],[69.6,173.7],[71.8,-123.5],[71.8,-116.5],[71.8,-109.4],[71.8,-95.3],[71.8,-88.2],[71.8,-81.2],[71.8,-52.9],[71.8,-45.9],[71.8,-38.8],[71.8,-31.8],[71.8,-24.7],[71.8,52.9],[71.8,74.1],[71.8,81.2],[71.8,88.2],[71.8,95.3],[71.8,102.4],[71.8,109.4],[71.8,116.5],[71.8,123.5],[71.8,144.7],[74.0,-124.0],[74.0,-52.0],[74.0,-44.0],[74.0,-36.0],[74.0,-28.0],[74.0,84.0],[74.0,92.0],[74.0,100.0],[74.0,108.0],[76.2,-60.0],[76.2,-50.8],[76.2,-41.5],[76.2,-32.3],[76.2,-23.1],[76.2,96.9],[76.2,106.2]];
   const cvs = document.getElementById('globe'), gctx = cvs.getContext('2d'), gw = document.getElementById('globeWrap');
-  let gMode = 'talent', rotL = -20, rotP = 18, velo = .12, dragging = false, focusTo = null, gW = 0, gH = 0, DPR = 1;
+  let gMode = 'gig', rotL = -20, rotP = 18, velo = .12, dragging = false, focusTo = null, gW = 0, gH = 0, DPR = 1;
   const rad = d => d * Math.PI / 180;
   function resizeGlobe() { DPR = Math.min(2, devicePixelRatio || 1); const r = gw.getBoundingClientRect(); gW = r.width; gH = r.height; cvs.width = gW * DPR; cvs.height = gH * DPR; }
   function proj(lat, lon, R, cx, cy) {
@@ -1628,7 +1774,7 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
   gw.addEventListener('pointerup', () => dragging = false);
   gw.addEventListener('pointercancel', () => dragging = false);
 
-  const LABELS = { talent: 'Global talent network · 7M+', gig: 'Active gig workers · live activity', langs: 'Languages & dialects', countries: 'Countries & markets', offices: 'Global offices · connected' };
+  const LABELS = { gig: 'Vetted active experts · 100K+', langs: 'Languages & dialects', countries: 'Countries & markets covered', offices: 'Global payments' };
   function setWorld(m) {
     gMode = m; arcs = []; blinks.clear(); hl.clear(); regionSel = null;
     document.querySelectorAll('.wtab').forEach(b => { const on = b.dataset.w === m; b.classList.toggle('on', on); b.setAttribute('aria-selected', on); });
@@ -1638,19 +1784,6 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
     velo = m === 'gig' ? .18 : .12;
   }
   document.querySelectorAll('.wtab').forEach(b => b.addEventListener('click', () => setWorld(b.dataset.w)));
-
-  // gig feed (illustrative task types)
-  const TASKS = ['Audio transcription', 'Speaker diarization', 'Image annotation', 'Video scene labeling', 'Model output rating', 'Preference ranking', 'Field data capture', 'First-person video', 'Translation review', 'Red-team prompt', 'Data validation'];
-  const feed = document.getElementById('gigFeed');
-  function feedTick() {
-    if (gMode === 'gig' && body.dataset.mode === 'enterprise') {
-      const c = pick(GEO.langs.filter(l => l[1].length));
-      const d = document.createElement('div'); d.innerHTML = `<i></i>${pick(TASKS)} · ${c[0]}<small>${c[1][0]}</small>`;
-      feed.prepend(d); while (feed.children.length > 6) feed.lastChild.remove();
-    }
-  }
-  for (let k = 0; k < 5; k++) feedTick();
-  setInterval(feedTick, 1600);
 
   // languages
   const langGrid = document.getElementById('langGrid'), langSearch = document.getElementById('langSearch'), langNote = document.getElementById('langNote');
@@ -1682,33 +1815,50 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
 
   /* ---------- Enterprise: DataVault catalog ---------- */
   const DV = {
-    multi: { mods: ['Text', 'Audio', 'Image', 'Video', 'Structured', 'Telecom', 'Interaction', 'Evaluation'], items: [
-      { m: 'Text', t: 'Multilingual Text Corpus', s: '12.5M samples · 50+ languages', d: 'Documents, OCR, conversations, code, multilingual corpora and synthetic text.', i: 'T' },
-      { m: 'Audio', t: 'Speech & Conversation', s: '8.2M hours · multiple accents', d: 'Speech, accents, voice, ambient sound, transcription and speaker data.', i: '♫' },
-      { m: 'Image', t: 'Labeled Image Dataset', s: '5.6M images · high-quality labels', d: 'Photographs, labeled images, medical imagery and image classification.', i: '▧' },
-      { m: 'Video', t: 'Driving Video Dataset', s: '1.2M hours · diverse environments', d: 'Video footage, media datasets, video annotation and scene understanding.', i: '▷' },
-      { m: 'Structured', t: 'Enterprise Transaction Data', s: '25M records · multi-domain', d: 'Tabular data, transactions, logs, time series, metadata and knowledge graphs.', i: '▤' },
-      { m: 'Telecom', t: 'Network Performance Data', s: '3.5M records · global coverage', d: 'Network performance, speed tests, latency, coverage and signal data.', i: '⌁' },
-      { m: 'Interaction', t: 'UI Interaction Dataset', s: '15M sessions · web, mobile, apps', d: 'UI interactions, clickstreams, digital workflows, agent trajectories and preference data.', i: '◰' },
-      { m: 'Evaluation', t: 'AI Evaluation Dataset', s: '2.8M prompt-response pairs', d: 'Prompts, responses, human feedback, RLHF, preference pairs and benchmarks.', i: '◇' } ] },
+    multi: { mods: ['Text', 'Audio', 'Image', 'Video', 'Structured', 'Telecom', 'Interaction', 'Feedback'], items: [
+      { m: 'Text', x: 'text', t: 'Multilingual Text Corpus', s: '12.5M samples · 50+ languages', d: 'Documents, OCR, conversations, code and multilingual corpora.' },
+      { m: 'Audio', x: 'audio', t: 'Speech & Conversation', s: '8.2M hours · multiple accents', d: 'Conversational speech with transcripts, timestamps and speaker labels.' },
+      { m: 'Image', x: 'image', img: 'img/s-street.jpg', t: 'Labeled Image Dataset', s: '5.6M images · high-quality labels', d: 'Real-world photos with bounding boxes and class labels.' },
+      { m: 'Video', x: 'video', img: 'img/s-driving.jpg', t: 'Driving Video Dataset', s: '1.2M hours · diverse environments', d: 'Dashcam footage across weather, light and traffic conditions.' },
+      { m: 'Structured', x: 'table', t: 'Enterprise Transaction Data', s: '25M records · multi-domain', d: 'Tabular transactions, logs and time series.' },
+      { m: 'Telecom', x: 'telecom', t: 'Network Performance Data', s: '3.5M records · global coverage', d: 'Speed tests, latency, coverage and signal data.' },
+      { m: 'Interaction', x: 'ui', t: 'UI Interaction Dataset', s: '15M sessions · web, mobile, apps', d: 'Clickstreams, workflows and agent trajectories.' },
+      { m: 'Feedback', x: 'pref', t: 'Human Preference Dataset', s: '2.8M prompt-response pairs', d: 'Prompts, ranked responses and expert rationales.' } ] },
     phys: { mods: ['Egocentric', 'Robotics', 'Autonomous', '3D / LiDAR', 'Geospatial', 'Sensor fusion', 'Environments', 'Simulation'], items: [
-      { m: 'Egocentric', t: 'Egocentric & Human Activity', s: 'First-person · wearable camera', d: 'First-person video, wearable-camera footage, human activities and motion tracking.', i: '◉' },
-      { m: 'Robotics', t: 'Robotics & Manipulation', s: 'Trajectories · teleoperation', d: 'Robot trajectories, manipulation, demonstrations, teleoperation and action sequences.', i: '⚙' },
-      { m: 'Autonomous', t: 'Autonomous Vehicles', s: 'Dashcam · telemetry', d: 'Driving scenarios, dashcam footage, road scenes, vehicle telemetry and camera feeds.', i: '▱' },
-      { m: '3D / LiDAR', t: 'LiDAR & 3D Spatial', s: 'Point clouds · depth · SLAM', d: 'Point clouds, depth maps, 3D scans, SLAM and spatial reconstruction.', i: '◇' },
-      { m: 'Geospatial', t: 'Geospatial & POI', s: 'Maps · GPS · road networks', d: 'Maps, GPS traces, POI attributes, road networks, addresses and location intelligence.', i: '⌖' },
-      { m: 'Sensor fusion', t: 'Sensor Fusion & Perception', s: 'Radar · LiDAR · IMU', d: 'Radar, LiDAR, cameras, IMU and multimodal sensor synchronization.', i: '⌁' },
-      { m: 'Environments', t: 'Physical Environments', s: 'Indoor · outdoor · industrial', d: 'Indoor/outdoor scenes, industrial environments, surveillance and environmental observations.', i: '▥' },
-      { m: 'Simulation', t: 'Simulation & World Interaction', s: 'Synthetic · physics', d: 'Synthetic environments, physical simulations, object interactions and spatial trajectories.', i: '⌘' } ] }
+      { m: 'Egocentric', x: 'ego', img: 'img/s-egocentric.jpg', t: 'Egocentric & Human Activity', s: 'First-person · wearable camera', d: 'Head-mounted video of everyday tasks with action labels.' },
+      { m: 'Robotics', x: 'robot', img: 'img/s-robotics.jpg', t: 'Robotics & Manipulation', s: 'Trajectories · teleoperation', d: 'Grasping and manipulation demos with action sequences.' },
+      { m: 'Autonomous', x: 'av', img: 'img/s-av.jpg', t: 'Autonomous Vehicles', s: 'Dashcam · telemetry', d: 'Road scenes paired with vehicle telemetry.' },
+      { m: '3D / LiDAR', x: 'lidar', t: 'LiDAR & 3D Spatial', s: 'Point clouds · depth · SLAM', d: 'Point clouds, depth maps and 3D scans.' },
+      { m: 'Geospatial', x: 'geo', img: 'img/s-geo.jpg', t: 'Geospatial & POI', s: 'Maps · GPS · road networks', d: 'Aerial imagery with verified points of interest.' },
+      { m: 'Sensor fusion', x: 'fusion', img: 'img/s-av.jpg', t: 'Sensor Fusion & Perception', s: 'Radar · LiDAR · IMU', d: 'Time-synced camera, LiDAR, radar and IMU streams.' },
+      { m: 'Environments', x: 'env', img: 'img/s-warehouse.jpg', t: 'Physical Environments', s: 'Indoor · outdoor · industrial', d: 'Industrial and indoor scenes with segmentation.' },
+      { m: 'Simulation', x: 'sim', img: 'img/s-sim.jpg', t: 'Simulation & World Interaction', s: 'Synthetic · physics', d: 'Simulated homes with object and scene graphs.' } ] }
   };
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const WAVE = (n, seed) => Array.from({ length: n }, (_, i) => 12 + Math.abs(Math.sin(i * .55 + seed) * Math.cos(i * .17 + seed * 2)) * 80);
+  /* Card thumbnails (photo, or a mini rendered preview for non-visual data) */
+  function dvThumb(d) {
+    if (d.img) return `<img src="${d.img}" alt="" loading="lazy">`;
+    const mini = {
+      text: '<div class="mt mt--text"><span>नमस्ते, आपका ऑर्डर…</span><span>¿Dónde está la estación?</span><span>مرحبا بك في المتجر</span><span>Habari ya asubuhi</span></div>',
+      audio: '<div class="mt mt--wave">' + WAVE(40, 1).map(h => `<i style="height:${h}%"></i>`).join('') + '</div>',
+      table: '<div class="mt mt--tbl">' + [['ID', 'AMOUNT', 'CHANNEL'], ['TX-8841', '₹4,210', 'UPI'], ['TX-8842', '$62.40', 'card'], ['TX-8843', '€1,980', 'card'], ['TX-8844', '₹299', 'wallet']].map(r => `<span>${r.map(c => `<em>${c}</em>`).join('')}</span>`).join('') + '</div>',
+      telecom: '<div class="mt mt--line"><svg viewBox="0 0 200 80" preserveAspectRatio="none"><path d="M0 60 L20 52 L40 58 L60 30 L80 38 L100 22 L120 40 L140 18 L160 26 L180 12 L200 20"/></svg></div>',
+      ui: '<div class="mt mt--ui"><b></b><span></span><span></span><i></i></div>',
+      pref: '<div class="mt mt--pref"><span class="win">A ✓</span><span>B</span></div>',
+      lidar: '<div class="mt mt--lidar"></div>'
+    };
+    return mini[d.x] || '';
+  }
   let dvTab = 'multi';
   const dvGrid = document.getElementById('dvGrid'), dvSide = document.getElementById('dvSide'), dvSearch = document.getElementById('dvSearch');
   function dvRender() {
     const set = DV[dvTab];
     dvSide.innerHTML = '<span class="mono">Modality</span>' + set.mods.map(m => `<label class="mcheck"><input type="checkbox" value="${m}">${m}</label>`).join('');
-    dvGrid.innerHTML = set.items.map((d, k) => `<div class="ds swap-in" style="animation-delay:${k * 50}ms" data-m="${d.m}" data-k="${k}">
-      <div class="ds__top"><span class="ds__ico">${d.i}</span><span class="ds__mod">${d.m}</span></div>
-      <b>${d.t}</b><span class="stat">${d.s}</span><p>${d.d}</p><button type="button">View sample</button></div>`).join('') + '<div class="empty" id="dvEmpty">No datasets match — try another search.</div>';
+    dvGrid.innerHTML = set.items.map((d, k) => `<button type="button" class="ds swap-in" style="animation-delay:${k * 50}ms" data-m="${d.m}" data-k="${k}">
+      <div class="ds__thumb">${dvThumb(d)}<span class="ds__mod">${d.m}</span><span class="ds__play">View sample</span></div>
+      <div class="ds__txt"><b>${d.t}</b><span class="stat">${d.s}</span></div></button>`).join('') + '<div class="empty" id="dvEmpty">No datasets match — try another search.</div>';
+    dvGrid.querySelectorAll('.mt--lidar').forEach(el => drawLidar(el, false));
     dvFilter();
   }
   function dvFilter() {
@@ -1716,7 +1866,8 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
     const mods = [...dvSide.querySelectorAll('input:checked')].map(i => i.value);
     let n = 0;
     dvGrid.querySelectorAll('.ds').forEach(c => {
-      const show = (!mods.length || mods.includes(c.dataset.m)) && (!q || c.textContent.toLowerCase().includes(q));
+      const d = DV[dvTab].items[+c.dataset.k];
+      const show = (!mods.length || mods.includes(c.dataset.m)) && (!q || (d.t + d.s + d.d + d.m).toLowerCase().includes(q));
       c.classList.toggle('hide', !show); if (show) n++;
     });
     document.getElementById('dvEmpty').style.display = n ? 'none' : 'block';
@@ -1726,18 +1877,104 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
   document.querySelectorAll('[data-dvtab]').forEach(b => b.addEventListener('click', () => {
     dvTab = b.dataset.dvtab; document.querySelectorAll('[data-dvtab]').forEach(x => x.classList.toggle('on', x === b)); dvRender();
   }));
+
+  /* LiDAR point cloud (procedural street scene, slowly rotating) */
+  function drawLidar(host, big) {
+    const c = document.createElement('canvas'); host.appendChild(c);
+    const pts = [];
+    for (let i = 0; i < (big ? 5200 : 1400); i++) { const a = Math.random() * Math.PI * 2, r = 2 + Math.random() * 24; pts.push([Math.cos(a) * r, 0, Math.sin(a) * r, 0]); }
+    const box = (cx, cz, w, h, d, tag) => { for (let i = 0; i < (big ? 420 : 110); i++) { const f = Math.floor(Math.random() * 3); let x = cx + (Math.random() - .5) * w, y = Math.random() * h, z = cz + (Math.random() - .5) * d; if (f === 0) x = cx + (Math.random() < .5 ? -w / 2 : w / 2); if (f === 1) z = cz + (Math.random() < .5 ? -d / 2 : d / 2); if (f === 2) y = h; pts.push([x, y, z, tag]); } };
+    box(5, 3, 4.4, 1.5, 1.9, 1); box(-6, -4, 4.6, 1.6, 2, 1); box(9, -7, 11, 3.2, 2.6, 2); box(-3, 8, .7, 1.8, .7, 3); box(-1.6, 8.6, .7, 1.7, .7, 3);
+    for (let i = 0; i < (big ? 900 : 260); i++) { const z = (Math.random() - .5) * 48; pts.push([-14 + Math.random() * .6, Math.random() * 7, z, 4]); pts.push([14 + Math.random() * .6, Math.random() * 6, z, 4]); }
+    const col = ['', '#1f6feb', '#16e9d8', '#f59e0b', '#4b5d86'];
+    let t = 0, raf;
+    const draw = () => {
+      if (!c.isConnected) return cancelAnimationFrame(raf);
+      const W = c.width = host.clientWidth * devicePixelRatio, H = c.height = host.clientHeight * devicePixelRatio, g = c.getContext('2d');
+      g.clearRect(0, 0, W, H); t += .003;
+      const ca = Math.cos(t), sa = Math.sin(t), f = W * .75, cp = Math.cos(.62), sp = Math.sin(.62);
+      for (const [x, y, z, k] of pts) {
+        const rx = x * ca - z * sa, z1 = x * sa + z * ca, y1 = y - 1;
+        const ry = y1 * cp - z1 * sp, rz = y1 * sp + z1 * cp + 38;
+        if (rz < 1) continue;
+        const px = W / 2 + rx * f / rz, py = H * .55 - ry * f / rz;
+        g.fillStyle = k ? col[k] : `rgba(22,${120 + (z * 4 | 0)},216,.55)`;
+        g.fillRect(px, py, devicePixelRatio * (big ? 1.4 : 1), devicePixelRatio * (big ? 1.4 : 1));
+      }
+      raf = requestAnimationFrame(draw);
+    };
+    draw();
+  }
+
+  /* Sample viewers — one per data type */
+  const WM = '<span class="wmk">SAMPLE · HUMENIUM DATAVAULT</span>';
+  const bx = (l, t, w, h, lab, c) => `<span class="bb" style="left:${l}%;top:${t}%;width:${w}%;height:${h}%;--c:${c || '#16e9d8'}"><em>${lab}</em></span>`;
+  const SAMPLE = {
+    text: () => `<div class="sv sv--doc">${[['hi', 'Hindi', 'नमस्ते! आपका ऑर्डर कल शाम तक पहुँच जाएगा।', 'Hello! Your order will arrive by tomorrow evening.'], ['es', 'Spanish', '¿Me podrías indicar cómo llegar a la estación central?', 'Could you tell me how to get to the central station?'], ['ar', 'Arabic', 'مرحبا بك، كيف يمكنني مساعدتك اليوم؟', 'Welcome, how can I help you today?'], ['sw', 'Swahili', 'Habari ya asubuhi, nina swali kuhusu bili yangu.', 'Good morning, I have a question about my bill.'], ['ja', 'Japanese', '明日の会議は午後三時に変更になりました。', 'Tomorrow’s meeting has moved to 3 pm.']].map(([c, n, s, e]) => `<div class="sv-row"><span class="lang">${c}</span><div><p dir="auto">${s}</p><small>${n} · EN: ${e}</small></div></div>`).join('')}${WM}</div>
+      <pre class="sv-json">{ "id": "txt_0004821", "lang": "hi-IN", "domain": "e-commerce", "register": "polite", "verified_by": "native_linguist", "qa_score": 0.98 }</pre>`,
+    audio: () => `<div class="sv sv--audio"><div class="aud"><button type="button" class="aud__play" data-speak aria-label="Play sample"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></button><div class="aud__wave">${WAVE(90, 3).map(h => `<i style="height:${h}%"></i>`).join('')}</div><span class="aud__t mono">00:14</span></div>
+      <div class="aud__tr">${[['S1', '00:00.4', 'Hi, I’d like to change my delivery address, please.'], ['S2', '00:03.1', 'Sure — can you confirm the order number for me?'], ['S1', '00:06.0', 'Yes, it’s four, eight, two, one… sorry, four-eight-two-one-seven.'], ['S2', '00:10.2', 'Got it. And the new address?']].map(([s, t, l]) => `<div class="seg" data-line="${esc(l)}"><span class="spk spk--${s}">${s}</span><span class="mono">${t}</span><p>${l}</p></div>`).join('')}</div>${WM}</div>
+      <pre class="sv-json">{ "audio": "conv_88213.wav", "sr": 16000, "accent": "en-IN", "speakers": 2, "noise": "indoor_low", "diarized": true }</pre>`,
+    image: d => `<div class="sv sv--img"><img src="${d.img}" alt="Labeled street scene">${bx(0, 48, 9.5, 52, 'person 0.97')}${bx(21, 51, 6.3, 27, 'person 0.95')}${bx(29.5, 54, 20.5, 25, 'car 0.99', '#1f6feb')}${bx(44, 52, 16, 19, 'car 0.98', '#1f6feb')}${bx(41, 32, 38, 34, 'bus 0.99', '#f59e0b')}${bx(70, 49, 11.5, 41, 'cyclist 0.96', '#f472b6')}${bx(80, 49, 12.5, 39, 'cyclist 0.95', '#f472b6')}${bx(86, 51, 14, 23, 'car 0.97', '#1f6feb')}${WM}</div>
+      <pre class="sv-json">{ "image": "street_041233.jpg", "boxes": 9, "classes": ["person","car","bus","cyclist"], "occlusion": "tagged", "reviewed": "2× human QA" }</pre>`,
+    video: d => `<div class="sv sv--vid"><div class="kb"><img src="${d.img}" alt="Dashcam frame in rain at dusk"></div>${bx(43, 47, 14, 15, 'vehicle', '#1f6feb')}${bx(26, 34, 8, 9, 'traffic light: red', '#f43f5e')}<span class="rec"><i></i>REC · CAM_FRONT</span><span class="hud mono">32 km/h · RAIN · DUSK</span><div class="vbar"><span class="mono vt">00:00:07</span><div class="vtrack"><i></i><b style="left:22%"></b><b style="left:48%"></b><b style="left:71%"></b></div><span class="mono">00:00:30</span></div>${WM}</div>
+      <pre class="sv-json">{ "clip": "drv_rain_0192.mp4", "fps": 30, "duration_s": 30, "weather": "rain", "light": "dusk", "events": ["red_light_stop","lane_merge","pedestrian_crossing"] }</pre>`,
+    table: () => `<div class="sv sv--tbl"><table><thead><tr><th>txn_id</th><th>timestamp</th><th>amount</th><th>channel</th><th>merchant_cat</th><th>label</th></tr></thead><tbody>${[['TX-884102', '2026-03-04 09:12', '₹4,210.00', 'UPI', 'grocery', 'legit'], ['TX-884103', '2026-03-04 09:13', '$62.40', 'card', 'fuel', 'legit'], ['TX-884104', '2026-03-04 09:13', '€1,980.00', 'card', 'electronics', 'review'], ['TX-884105', '2026-03-04 09:15', '₹299.00', 'wallet', 'streaming', 'legit'], ['TX-884106', '2026-03-04 09:16', '$4,999.99', 'card', 'gift_cards', 'fraud'], ['TX-884107', '2026-03-04 09:18', '£18.75', 'card', 'restaurant', 'legit']].map(r => `<tr>${r.map((c, i) => `<td${i === 5 ? ` class="lbl lbl--${c}"` : ''}>${c}</td>`).join('')}</tr>`).join('')}</tbody></table>${WM}</div>
+      <pre class="sv-json">{ "records": 25000000, "pii": "removed", "schema": "parquet", "labels": ["legit","review","fraud"] }</pre>`,
+    telecom: () => `<div class="sv sv--tel"><div class="tel-kpis"><div><b>142<small> Mbps</small></b><span>Download</span></div><div><b>38<small> Mbps</small></b><span>Upload</span></div><div><b>21<small> ms</small></b><span>Latency</span></div><div><b>−87<small> dBm</small></b><span>RSRP</span></div></div><svg viewBox="0 0 400 110" class="tel-chart" preserveAspectRatio="none"><defs><linearGradient id="tg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#16e9d8" stop-opacity=".35"/><stop offset="1" stop-color="#16e9d8" stop-opacity="0"/></linearGradient></defs><path d="M0 80 L25 70 L50 74 L75 50 L100 58 L125 40 L150 52 L175 30 L200 36 L225 22 L250 44 L275 28 L300 34 L325 18 L350 26 L375 20 L400 24 L400 110 L0 110Z" fill="url(#tg)"/><path d="M0 80 L25 70 L50 74 L75 50 L100 58 L125 40 L150 52 L175 30 L200 36 L225 22 L250 44 L275 28 L300 34 L325 18 L350 26 L375 20 L400 24" fill="none" stroke="#16e9d8" stroke-width="2"/></svg><span class="mono tel-cap">Throughput over a 24 h drive test · Mumbai, 5G NSA</span>${WM}</div>
+      <pre class="sv-json">{ "test_id": "st_55120", "tech": "5G NSA", "band": "n78", "lat": 19.07, "lon": 72.87, "device": "android_14", "indoor": false }</pre>`,
+    ui: () => `<div class="sv sv--ui"><div class="uimock"><div class="uim__bar"><i></i><i></i><i></i><span>shop.example / checkout</span></div><div class="uim__body"><span class="uim__f"></span><span class="uim__f"></span><span class="uim__f short"></span><span class="uim__btn">Place order</span><span class="cur" style="left:68%;top:78%"></span><span class="clk" style="left:68%;top:78%"></span></div></div><ol class="traj">${[['00.0s', 'open', '/cart'], ['02.4s', 'click', 'button#checkout'], ['05.1s', 'type', 'input#email'], ['09.8s', 'select', 'shipping: express'], ['12.6s', 'click', 'button “Place order”']].map(([t, a, el]) => `<li><span class="mono">${t}</span><b>${a}</b><code>${el}</code></li>`).join('')}</ol>${WM}</div>
+      <pre class="sv-json">{ "session": "ui_7781203", "platform": "web", "steps": 5, "goal": "complete_checkout", "success": true }</pre>`,
+    pref: () => `<div class="sv sv--pref"><div class="pq"><span class="mono">Prompt</span><p>My 4-year-old has a fever of 38.5 °C. What should I do tonight?</p></div><div class="pr"><div class="pr__c win"><span class="mono">Response A · preferred</span><p>Keep her hydrated and lightly dressed; a child-dose paracetamol can help. Seek care urgently if she’s unusually drowsy, has trouble breathing, a rash that doesn’t fade, or the fever lasts over 3 days.</p></div><div class="pr__c"><span class="mono">Response B</span><p>Fevers are normal in kids. Just let her sleep and check again in the morning.</p></div></div><div class="pw"><b>Rater rationale</b><span>A is safer and actionable — gives clear red flags. B omits warning signs.</span><span class="mono">Rater: pediatric nurse · Helpfulness 5/5 · Safety 5/5</span></div>${WM}</div>`,
+    ego: d => `<div class="sv sv--img"><img src="${d.img}" alt="First-person view of hands chopping vegetables">${bx(35, 19.5, 37.5, 35, 'cutting_board', '#1f6feb')}${bx(40.5, 36, 13.5, 13, 'knife', '#f59e0b')}${bx(38, 42, 11, 26, 'left_hand', '#f472b6')}${bx(51.5, 42.5, 13.5, 17, 'right_hand', '#f472b6')}<div class="acts"><span class="on">00:12 pick up knife</span><span class="on">00:15 chop carrot</span><span>00:31 transfer to bowl</span></div>${WM}</div>
+      <pre class="sv-json">{ "clip": "ego_kitchen_0441", "device": "head-mounted", "res": "1080p", "task": "prepare_salad", "hand_pose": true, "faces": "blurred" }</pre>`,
+    robot: d => `<div class="sv sv--img"><img src="${d.img}" alt="Robot gripper picking a red block">${bx(32, 0, 36, 40, 'gripper', '#16e9d8')}${bx(44, 42, 13, 25, 'target: red_block', '#f43f5e')}<svg class="traj-ov" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M50 8 C 50 20, 46 26, 48 40"/></svg>${WM}</div>
+      <pre class="sv-json">{ "episode": "pick_place_00982", "control": "teleop", "hz": 30, "actions": ["approach","grasp","lift","place"], "success": true }</pre>`,
+    av: d => `<div class="sv sv--img"><img src="${d.img}" alt="Test vehicle with roof sensor rig">${bx(11, 12, 76, 78, 'ego_vehicle', '#1f6feb')}<div class="telem mono"><span>speed 41.6 km/h</span><span>steer −2.4°</span><span>brake 0.00</span><span>gps 37.4021, −122.0841</span></div>${WM}</div>
+      <pre class="sv-json">{ "drive": "av_suburb_0117", "cams": 6, "lidar": "roof_128ch", "can_bus": true, "duration_min": 42 }</pre>`,
+    lidar: () => `<div class="sv sv--lidar" id="lidarHost"><div class="lg"><span style="--c:#1f6feb">car</span><span style="--c:#16e9d8">truck</span><span style="--c:#f59e0b">pedestrian</span><span style="--c:#4b5d86">building</span></div>${WM}</div>
+      <pre class="sv-json">{ "frame": "lidar_000412.pcd", "points": 118422, "channels": 128, "labels": "3d_cuboids", "slam_pose": true }</pre>`,
+    geo: d => `<div class="sv sv--img"><img src="${d.img}" alt="Aerial view of a city neighbourhood">${[[30, 40, 'Café'], [62, 30, 'Pharmacy'], [48, 68, 'Bus stop'], [78, 62, 'Park entrance'], [18, 70, 'School']].map(([l, t, n]) => `<span class="pin" style="left:${l}%;top:${t}%"><em>${n}</em></span>`).join('')}${WM}</div>
+      <pre class="sv-json">{ "poi_id": "poi_99231", "name": "Pharmacy", "verified": "on-site", "hours": "08:00–22:00", "photo_count": 4, "last_checked": "2026-10" }</pre>`,
+    fusion: d => `<div class="sv sv--fus"><img src="${d.img}" alt="Vehicle sensor rig"><div class="fus">${['CAM_FRONT', 'LIDAR_TOP', 'RADAR_FRONT', 'IMU'].map((s, i) => `<div><span class="mono">${s}</span><div class="ticks">${Array.from({ length: 24 }, (_, k) => `<i style="opacity:${i === 3 ? 1 : (k % (i + 1) ? .25 : 1)}"></i>`).join('')}</div></div>`).join('')}<span class="mono fus-cap">Synced to ±1 ms · hardware timestamping</span></div>${WM}</div>
+      <pre class="sv-json">{ "scene": "fus_0381", "sensors": ["cam×6","lidar","radar×5","imu","gnss"], "sync": "ptp", "calib": "included" }</pre>`,
+    env: d => `<div class="sv sv--img sv--seg"><img src="${d.img}" alt="Warehouse aisle with forklifts"><span class="segm" style="left:0;top:0;width:26%;height:100%;--c:rgba(31,111,235,.28)"><em>shelving</em></span><span class="segm" style="right:0;top:0;width:24%;height:100%;--c:rgba(31,111,235,.28)"><em>shelving</em></span><span class="segm" style="left:26%;top:74%;width:50%;height:26%;--c:rgba(22,233,216,.22)"><em>floor</em></span>${bx(17, 44, 16, 40, 'forklift', '#f59e0b')}${bx(51, 57, 8, 16, 'forklift', '#f59e0b')}${bx(70, 50, 7, 36, 'worker', '#f472b6')}${WM}</div>
+      <pre class="sv-json">{ "scene": "wh_aisle_2210", "type": "industrial_indoor", "labels": "panoptic", "classes": 14, "lighting": "led_overhead" }</pre>`,
+    sim: d => `<div class="sv sv--img"><img src="${d.img}" alt="Simulated apartment for robot training">${bx(19, 68, 12, 24, 'robot', '#16e9d8')}${bx(56, 34, 36, 38, 'sofa', '#1f6feb')}${bx(45, 60, 21, 17, 'coffee_table', '#f59e0b')}<div class="acts"><span class="on">goal: fetch cup from table</span><span>path: 3.2 m</span></div>${WM}</div>
+      <pre class="sv-json">{ "env": "sim_home_041", "engine": "physics_3d", "objects": 63, "scene_graph": true, "domain_rand": true }</pre>`
+  };
   const modal = document.getElementById('dvModal');
+  function closeDv() { modal.classList.remove('open'); try { speechSynthesis.cancel(); } catch (_) {} }
   dvGrid.addEventListener('click', e => {
-    const btn = e.target.closest('.ds button'); if (!btn) return;
-    const d = DV[dvTab].items[+btn.closest('.ds').dataset.k];
+    const card = e.target.closest('.ds'); if (!card) return;
+    const d = DV[dvTab].items[+card.dataset.k];
     document.getElementById('dvmMod').textContent = 'DataVault · ' + d.m;
     document.getElementById('dvmTitle').textContent = d.t;
     document.getElementById('dvmDesc').textContent = d.d;
-    document.getElementById('dvmMeta').innerHTML = d.s.split(' · ').map(x => `<span>${x}</span>`).join('') + '<span>Audit &amp; traceability</span><span>Secure &amp; compliant</span>';
+    document.getElementById('dvmView').innerHTML = SAMPLE[d.x](d);
+    document.getElementById('dvmMeta').innerHTML = d.s.split(' · ').map(x => `<span>${x}</span>`).join('') + '<span>Watermarked</span><span>Audit &amp; traceability</span>';
+    const lh = document.getElementById('lidarHost'); if (lh) drawLidar(lh, true);
     modal.classList.add('open');
   });
-  modal.addEventListener('click', e => { if (e.target === modal || e.target.closest('[data-close]')) modal.classList.remove('open'); });
-  addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
+  modal.addEventListener('click', e => {
+    if (e.target === modal || e.target.closest('[data-close]')) return closeDv();
+    const sp = e.target.closest('[data-speak]'); if (!sp) return;
+    const box = sp.closest('.sv--audio'), segs = [...box.querySelectorAll('.seg')];
+    if (box.classList.contains('playing')) { box.classList.remove('playing'); try { speechSynthesis.cancel(); } catch (_) {} return; }
+    box.classList.add('playing');
+    if (!('speechSynthesis' in window)) { segs.forEach((s, i) => setTimeout(() => { segs.forEach(x => x.classList.toggle('on', x === s)); if (i === segs.length - 1) setTimeout(() => box.classList.remove('playing'), 2500); }, i * 2500)); return; }
+    const voices = speechSynthesis.getVoices().filter(v => /^en/i.test(v.lang));
+    speechSynthesis.cancel();
+    segs.forEach((s, i) => {
+      const u = new SpeechSynthesisUtterance(s.dataset.line);
+      if (voices.length) u.voice = voices[(s.querySelector('.spk--S2') ? 1 : 0) % voices.length];
+      u.pitch = s.querySelector('.spk--S2') ? .85 : 1.1; u.rate = 1.02;
+      u.onstart = () => segs.forEach(x => x.classList.toggle('on', x === s));
+      if (i === segs.length - 1) u.onend = () => { box.classList.remove('playing'); segs.forEach(x => x.classList.remove('on')); };
+      speechSynthesis.speak(u);
+    });
+  });
+  addEventListener('keydown', e => { if (e.key === 'Escape') closeDv(); });
   dvRender();
 
   /* ---------- Enterprise: case studies (outcome dashboard) ---------- */
@@ -1750,7 +1987,7 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
     { tag: 'ASR & voice data', t: 'Dialect-level voice data', d: 'Collection and transcription with timestamps, speaker diarization and ML-ready JSON output — from raw audio to an AI-ready dataset tracked in DataVault.',
       k: [['1,000+', 'Hours of voice data'], ['~4 wks', 'Time to delivery'], ['423+', 'Languages available'], ['JSON', 'ML-ready output']],
       ch: ['Dialect-level coverage', 'Real-world acoustic environments', 'Speaker diarization at scale'],
-      ex: ['Global acquisition from the talent network', 'BPO, mobile & field capture', 'Linguist-led human-in-the-loop QA'],
+      ex: ['Recruited from our vetted expert network', 'BPO, mobile & field capture', 'Linguist-led human-in-the-loop QA'],
       im: ['Raw → labeled → AI-ready dataset', 'Audit & traceability in DataVault', 'Delivered in ~4 weeks'] },
     { tag: 'Longitudinal speech', t: '5-day longitudinal capture', d: 'Multi-day voice capture across indoor and outdoor settings with background noise, overlapping speech and low-bandwidth conditions.',
       k: [['4,000', 'Speakers'], ['5 days', 'Per speaker capture'], ['4–5 wks', 'Engagement'], ['Real-world', 'Acoustic conditions']],
@@ -1773,22 +2010,53 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
       ex: ['Coordinated compatible Android devices', 'Task-based recording guides', 'QC-based approval of submissions'],
       im: ['Privacy & QC built into collection', 'Supports embodied-AI workflows', 'Wider first-person activity coverage'] }
   ];
-  const csList = document.getElementById('csList'), csPanel = document.getElementById('csPanel');
-  csList.innerHTML = CASES.map((c, i) => `<button class="cs-item" role="tab" data-i="${i}"><small>${c.tag}</small><b>${c.t}</b></button>`).join('');
-  function csShow(i) {
-    csList.querySelectorAll('.cs-item').forEach((b, k) => { b.classList.toggle('on', k === i); b.setAttribute('aria-selected', k === i); });
-    const c = CASES[i];
-    csPanel.classList.remove('cs-anim'); void csPanel.offsetWidth; csPanel.classList.add('cs-anim');
-    csPanel.innerHTML = `<span class="mono tag">Case study · ${c.tag}</span><h3>${c.t}</h3><p>${c.d}</p>
+  const TYPES = [
+    { k: 'audio', n: 'Audio & speech', ic: '<path d="M12 3a3 3 0 00-3 3v6a3 3 0 006 0V6a3 3 0 00-3-3z"/><path d="M19 11a7 7 0 01-14 0M12 18v3"/>' },
+    { k: 'video', n: 'Video & egocentric', ic: '<rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/>' },
+    { k: 'text', n: 'Transcription & annotation', ic: '<path d="M4 6h16M4 12h16M4 18h10"/>' }
+  ];
+  const CASE_TYPE = ['text', 'audio', 'audio', 'audio', 'audio', 'video'];
+  const CASE_IMG = ['case-transcription', 'case-dialect', 'case-longitudinal', 'case-malay', 'case-audio', 'case-egocentric'];
+  const CASE_STAT = [['30', 'languages'], ['1,000+', 'hours'], ['4,000', 'speakers'], ['1 hr', 'bilingual'], ['9', 'language groups'], ['1080p', 'first-person']];
+  const PAT = {
+    audio: '<svg class="pat" viewBox="0 0 300 120" preserveAspectRatio="none"><g fill="currentColor">' + Array.from({ length: 48 }, (_, i) => { const h = 10 + Math.abs(Math.sin(i * .9) * Math.cos(i * .31)) * 70; return `<rect x="${6 + i * 6.1}" y="${48 - h / 2}" width="3" height="${h}" rx="1.5"/>`; }).join('') + '</g></svg>',
+    video: '<svg class="pat" viewBox="0 0 300 120" fill="none" stroke="currentColor" stroke-width="1.2">' + Array.from({ length: 5 }, (_, i) => `<rect x="${10 + i * 60}" y="16" width="52" height="40" rx="4"/>`).join('') + '<path d="M0 66h300M0 10h300" stroke-dasharray="4 6"/></svg>',
+    text: '<svg class="pat" viewBox="0 0 300 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">' + Array.from({ length: 6 }, (_, i) => `<path d="M16 ${14 + i * 12}h${120 + ((i * 53) % 140)}"/>`).join('') + '</svg>'
+  };
+  const cxTypes = document.getElementById('cxTypes'), cxGrid = document.getElementById('cxGrid');
+  const ico = d => `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
+  cxTypes.innerHTML = `<button class="cx-type on" data-k="all"><i>${ico('<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>')}</i>All<small>${CASES.length}</small></button>` +
+    TYPES.map(t => `<button class="cx-type" data-k="${t.k}"><i>${ico(t.ic)}</i>${t.n}<small>${CASE_TYPE.filter(x => x === t.k).length}</small></button>`).join('');
+  cxGrid.innerHTML = CASES.map((c, i) => `<button class="tile cxt" data-i="${i}" data-k="${CASE_TYPE[i]}">
+      <div class="cxt__art"><img src="img/${CASE_IMG[i]}.jpg" alt="" loading="lazy"><b>${CASE_STAT[i][0]}<small>${CASE_STAT[i][1]}</small></b></div>
+      <div class="cxt__body"><span class="mono">${c.tag}</span><h3>${c.t}</h3><span class="cxt__go">Read case study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></button>`).join('');
+  cxTypes.addEventListener('click', e => {
+    const b = e.target.closest('.cx-type'); if (!b) return;
+    cxTypes.querySelectorAll('.cx-type').forEach(x => x.classList.toggle('on', x === b));
+    cxGrid.querySelectorAll('.cxt').forEach(t => { const show = b.dataset.k === 'all' || t.dataset.k === b.dataset.k; t.classList.toggle('hide', !show); if (show) { t.classList.remove('swap-in'); void t.offsetWidth; t.classList.add('swap-in'); } });
+  });
+  const csModal = document.getElementById('csModal'), csmBox = document.getElementById('csmBox');
+  cxGrid.addEventListener('click', e => {
+    const t = e.target.closest('.cxt'); if (!t) return; const c = CASES[+t.dataset.i];
+    csmBox.innerHTML = `<div class="cs-hero"><img src="img/${CASE_IMG[+t.dataset.i]}.jpg" alt=""></div><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px"><span class="mono tag">Case study · ${c.tag}</span><button class="theme-btn" data-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+      <h3 id="csmTitle" style="font-size:28px">${c.t}</h3><p>${c.d}</p>
       <div class="cs-kpis">${c.k.map(([v, l]) => `<div class="cs-kpi"><span class="v">${v}</span><span class="l">${l}</span></div>`).join('')}</div>
       <div class="cs-cols">
         <div class="cs-col"><h4><i style="background:#f59e0b"></i>Challenge</h4><ul>${c.ch.map(x => `<li>${x}</li>`).join('')}</ul></div>
         <div class="cs-col"><h4><i style="background:#1745ce"></i>Execution</h4><ul>${c.ex.map(x => `<li>${x}</li>`).join('')}</ul></div>
         <div class="cs-col imp"><h4><i style="background:var(--teal)"></i>Outcome</h4><ul>${c.im.map(x => `<li>${x}</li>`).join('')}</ul></div>
       </div>`;
-  }
-  csList.addEventListener('click', e => { const b = e.target.closest('.cs-item'); if (b) csShow(+b.dataset.i); });
-  csShow(0);
+    csModal.classList.add('open');
+  });
+  csModal.addEventListener('click', e => { if (e.target === csModal || e.target.closest('[data-close]')) csModal.classList.remove('open'); });
+  addEventListener('keydown', e => { if (e.key === 'Escape') csModal.classList.remove('open'); });
+
+  /* ---------- DataVault: copy shareable link ---------- */
+  const dvShare = document.getElementById('dvShare');
+  dvShare.addEventListener('click', async () => {
+    const url = 'https://humenium.ai/datavault';
+    try { await navigator.clipboard.writeText(url); say('Link copied: ' + url); } catch (_) { say(url); }
+  });
 
   /* ---------- Rings + pipeline animate on view ---------- */
   new IntersectionObserver((es, o) => es.forEach(e => {
@@ -1824,11 +2092,20 @@ html[data-theme="light"] .theme-btn .moon{transform:translateY(-30px) rotate(90d
   }
 
   /* ---------- Initial mode: #enterprise / #earner link, else last choice ---------- */
-  let initial = 'earner';
+  const VAULT = body.dataset.page === 'vault';
+  let initial = 'earner', jump = null;
   if (location.hash === '#enterprise' || location.hash === '#earner') initial = location.hash.slice(1);
+  else if (VAULT || ['#datavault', '#lifecycle', '#cases', '#drives', '#scale'].includes(location.hash)) { initial = 'enterprise'; jump = VAULT ? null : location.hash; }
   else { try { initial = localStorage.getItem('hm-mode') || 'earner'; } catch (e) {} }
   setMode(initial, { animate: false, seek: false });
+  if (VAULT) {
+    document.querySelectorAll('main > .hero, main > section').forEach(el => { if (!['datavault', 'contact'].includes(el.id)) el.style.display = 'none'; });
+    document.querySelectorAll('.nav__links a').forEach(a => { if (!['#datavault', '#contact'].includes(a.getAttribute('href'))) a.style.display = 'none'; });
+    document.querySelector('.nav__logo').href = '/';
+    try { history.replaceState(null, '', location.pathname); } catch (e) {}
+  }
   observe(document);
+  if (jump) { const el = document.querySelector(jump); if (el) setTimeout(() => el.scrollIntoView(), 60); try { history.replaceState(null, '', jump); } catch (e) {} }
 })();
 </script>
 </body>
